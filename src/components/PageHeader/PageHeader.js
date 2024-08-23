@@ -5,6 +5,8 @@ import {
   HeaderName,
   HeaderContainer,
   SkipToContent,
+  HeaderNavigation,
+  HeaderMenuItem,
 } from '@carbon/react';
 
 class PageHeader extends React.Component {
@@ -20,9 +22,20 @@ class PageHeader extends React.Component {
           <>
             <Header aria-label="Header">
               <SkipToContent />
-              <HeaderName as={Link} to="/" prefix="AAAI 2025 Bridge on">
+              <HeaderName as={Link} to="/PlanningNL" prefix="AAAI 2025 Bridge on">
                 Planning in Natural-Language
               </HeaderName>
+              <HeaderNavigation aria-label="Organizers">
+                <HeaderMenuItem as={Link} to="/PlanningNL/org" className="pink-diminish">
+                Organizers
+                </HeaderMenuItem>
+                <HeaderMenuItem
+                  as={Link}
+                  to="/PlanningNL/speakers"
+                  className="green-diminish">
+                  Speakers
+                </HeaderMenuItem>
+              </HeaderNavigation>
             </Header>
           </>
         )}

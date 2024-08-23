@@ -1,0 +1,15 @@
+{
+  "short_name": "Planning-in-Natural-Language",
+  "name": "AAAI 2025 Bridge Program Planning in Natural Language",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
