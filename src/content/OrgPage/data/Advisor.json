@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "name": "Biplav Srivastava",
+        "affiliation": "University of South Carolina",
+        "link": "https://sites.google.com/site/biplavsrivastava"
+    },
+    {
+        "id": 1,
+        "name": "Sriraam Natarajan",
+        "affiliation": "The University of Texas at Dallas",
+        "link": "https://personal.utdallas.edu/~sriraam.natarajan/"
+    },
+    {
+        "id": 2,
+        "name": "Subbarao Khambampati",
+        "affiliation": "Arizona State University",
+        "link": "https://rakaposhi.eas.asu.edu"
+    }    
+]

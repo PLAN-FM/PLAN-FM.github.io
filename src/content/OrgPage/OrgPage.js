@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Reference,
   Instructor,
+  Advisor,
   Resource,
   shuffleArray,
 } from '../../components/Info';
@@ -27,6 +28,7 @@ import {
 } from '@carbon/react';
 
 let TeamList = require('./data/Team.json'); 
+let AdvisorList = require('./data/Advisor.json'); 
 
 class OrgPage extends React.Component {
   constructor(props) {
@@ -73,6 +75,17 @@ class OrgPage extends React.Component {
                   </React.Fragment>
                 ))}
               </Grid>
+            
+              <h4 >Advising Team</h4>
+              <hr />
+              <StructuredListBody>
+                {AdvisorList.map((item, key) => (
+                  <React.Fragment key={key}>
+                    <Advisor props={item} />
+                  </React.Fragment>
+                ))}
+              </StructuredListBody>
+
 
             <br />
             <br />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReferenceList } from './data/References';
-import { Reference, Instructor } from '../../components/Info';
+import { Reference, Instructor, Advisor } from '../../components/Info';
 import {
   Grid,
   Column,
@@ -55,35 +55,7 @@ const LandingPage = props => {
         <br/>
         <br/>
         <br/>
-          <h4>Program</h4>
-          <hr />
-
-
-          <br />
-          <br />
-
-          <Accordion align="start">
-            <AccordionItem
-              title={<strong>Introduction | 20 min</strong>}
-              open>
-              <UnorderedList>
-                <ListItem>
-                  | 5 min
-                </ListItem>
-                <ListItem>| 15 min</ListItem>
-              </UnorderedList>
-            </AccordionItem>
-          </Accordion>
-
-          <br />
-          <br />
-          <br />
-          <br />
-
-          <br />
-          <br />
-          <br />
-          <br />
+          Details coming soon.
         </Column>
         
       </Grid>
