@@ -27,7 +27,7 @@ class PageHeader extends React.Component {
               </HeaderName>
               <HeaderNavigation aria-label="Organizers">
                 <HeaderMenuItem as={Link} to="/org" className="pink-diminish">
-                Organizers
+                  Organizers
                 </HeaderMenuItem>
               </HeaderNavigation>
             </Header>

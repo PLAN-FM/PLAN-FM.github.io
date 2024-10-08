@@ -23,7 +23,7 @@ import {
 
 //   render() {
 
-  // }
+// }
 // }
 
 const LandingPage = props => {
@@ -36,28 +36,28 @@ const LandingPage = props => {
       }}>
       <Grid>
         <Column lg={12} md={8} sm={4}>
-        <a
+          <a
             href=""
             rel="noopener noreferrer"
             target="_blank"
             className="text-blue sub-title"
             style={{ textDecoration: 'none' }}>
-           <span>PLAN-FM</span>
-          </a>        <br/>
-          <br/>
+            <span>PLAN-FM</span>
+          </a>{' '}
+          <br />
+          <br />
           <h2 className="">
-          Bridging <u>Pl</u>anning <u>a</u>nd Reasoning in <u>N</u>atural Language with <u>F</u>oundational <u>M</u>odels </h2>
-
-
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+            Bridging <u>Pl</u>anning <u>a</u>nd Reasoning in <u>N</u>atural
+            Language with <u>F</u>oundational <u>M</u>odels{' '}
+          </h2>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           Details coming soon.
         </Column>
-        
       </Grid>
     </div>
   );

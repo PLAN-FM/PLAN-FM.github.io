@@ -1,4 +1,3 @@
-const ReferenceList = [
-];
+const ReferenceList = [];
 
 export { ReferenceList };

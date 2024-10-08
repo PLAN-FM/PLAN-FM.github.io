@@ -29,18 +29,19 @@ const Reference = props => {
   );
 };
 
-
 const Advisor = props => {
   return (
     <StructuredListRow>
       <StructuredListCell>
-        <a href={props.props.link}><strong>{props.props.name}</strong></a><br/>
+        <a href={props.props.link}>
+          <strong>{props.props.name}</strong>
+        </a>
+        <br />
         <i>{props.props.affiliation}</i>
       </StructuredListCell>
     </StructuredListRow>
   );
 };
-
 
 const Instructor = props => {
   return (

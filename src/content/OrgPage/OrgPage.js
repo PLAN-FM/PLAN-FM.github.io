@@ -7,7 +7,6 @@ import {
   shuffleArray,
 } from '../../components/Info';
 
-
 import {
   Grid,
   Column,
@@ -27,8 +26,8 @@ import {
   Tag,
 } from '@carbon/react';
 
-let TeamList = require('./data/Team.json'); 
-let AdvisorList = require('./data/Advisor.json'); 
+let TeamList = require('./data/Team.json');
+let AdvisorList = require('./data/Advisor.json');
 
 class OrgPage extends React.Component {
   constructor(props) {
@@ -66,30 +65,28 @@ class OrgPage extends React.Component {
             <br />
             <br />
 
-            <h4 >Organizing Team</h4>
-              <hr />
-              <Grid>
-                {TeamList.map((item, key) => (
-                  <React.Fragment key={key}>
-                    <Instructor props={item} />
-                  </React.Fragment>
-                ))}
-              </Grid>
-            
-              <h4 >Advising Team</h4>
-              <hr />
-              <StructuredListBody>
-                {AdvisorList.map((item, key) => (
-                  <React.Fragment key={key}>
-                    <Advisor props={item} />
-                  </React.Fragment>
-                ))}
-              </StructuredListBody>
+            <h4>Organizing Team</h4>
+            <hr />
+            <Grid>
+              {TeamList.map((item, key) => (
+                <React.Fragment key={key}>
+                  <Instructor props={item} />
+                </React.Fragment>
+              ))}
+            </Grid>
 
+            <h4>Advising Team</h4>
+            <hr />
+            <StructuredListBody>
+              {AdvisorList.map((item, key) => (
+                <React.Fragment key={key}>
+                  <Advisor props={item} />
+                </React.Fragment>
+              ))}
+            </StructuredListBody>
 
             <br />
             <br />
-
           </div>
         </Column>
       </Grid>
