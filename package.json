@@ -2,7 +2,7 @@
   "name": "PLAN-FM",
   "homepage": "https://plan-fm.github.io",
   "version": "0.0.0",
-  "repository": "git@github.com:PLAN-FM/PLAN-FM.git  ",
+  "repository": "git@github.com:PLAN-FM/PLAN-FM.git",
   "bugs": "",
   "license": "MIT",
   "scripts": {
