@@ -15,8 +15,8 @@ class App extends Component {
         <PageHeader />
         <Content>
           <Switch>
-            <Route exact path="/PlanningNL" component={LandingPage} />
-            <Route exact path="/PlanningNL/org" component={OrgPage} />
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/org" component={OrgPage} />
           </Switch>
         </Content>
       </>
