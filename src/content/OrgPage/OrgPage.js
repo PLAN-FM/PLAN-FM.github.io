@@ -50,12 +50,6 @@ class OrgPage extends React.Component {
       });
   }
 
-  switchDay(e) {
-    this.setState({
-      ...this.state,
-      day: e.index + 1,
-    });
-  }
 
   render() {
     return (
