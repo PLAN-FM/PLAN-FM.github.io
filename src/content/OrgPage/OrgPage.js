@@ -53,12 +53,12 @@ class OrgPage extends React.Component {
 
   render() {
     return (
-      <Grid>
-        <Column lg={12} md={8} sm={4}>
-          <div style={{ minHeight: '100vh' }}>
-            <br />
-            <br />
-
+          <div style={{ minHeight: '100vh', width:"90%",
+            minHeight: '100vh',
+            paddingTop: '50px',
+            paddingBottom: '100px',
+            margin: '0px auto auto auto' }}>
+           
             <h4>Organizing Team</h4>
             <hr />
             <Grid>
@@ -68,7 +68,7 @@ class OrgPage extends React.Component {
                 </React.Fragment>
               ))}
             </Grid>
-
+<br/><br/>
             <h4>Advising Team</h4>
             <hr />
             <StructuredListBody>
@@ -80,10 +80,10 @@ class OrgPage extends React.Component {
             </StructuredListBody>
 
             <br />
-            <br />
+            <hr/>
+            Contact: <a href="mailto:plan-fm-bridge@googlegroups.com">plan-fm-bridge@googlegroups.com</a>
+            <br/><br/>
           </div>
-        </Column>
-      </Grid>
     );
   }
 }
