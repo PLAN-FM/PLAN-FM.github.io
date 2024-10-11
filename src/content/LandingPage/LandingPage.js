@@ -7,11 +7,14 @@ import {
   ToastNotification,
   StructuredListWrapper,
   StructuredListBody,
+  ProgressStep,
+  ProgressIndicator,
+  Button,
+  ButtonSet,
   Accordion,
   AccordionItem,
   UnorderedList,
   ListItem,
-  Button,
   Link,
 } from '@carbon/react';
 
@@ -52,6 +55,35 @@ const LandingPage = props => {
             className="text-blue"
             style={{ textDecoration: 'none' }}>AAAI 2025</a></h5>
           <h5>Philadelphia, Pennsylvania, USA</h5>
+          <br />
+
+
+<Column lg={16} md={8} sm={4}>
+                <ProgressIndicator
+              
+                currentIndex={1}
+                  style={{ marginTop: '15px', fontSize: '2em' }}>
+                  <ProgressStep
+                  
+                    label="CFP"
+                    secondaryLabel="Open"
+                  />
+                  <ProgressStep
+                    label="Submissions Due"
+                    secondaryLabel="November 24th, 2024"
+                  />
+                  <ProgressStep
+                    label="Author Notifications"
+                    secondaryLabel="December 9th, 2024"
+                  />
+                  <ProgressStep
+                    
+                    label="PLAN-FM "
+                    secondaryLabel="AAAI 2025"
+                  />
+                </ProgressIndicator>
+              </Column>
+          <br />
           <br />
           <br />
           <br />
@@ -111,6 +143,7 @@ We also accept submissions of abstracts, demonstrations as well as position pape
 <p>
 We solicit submissions relevant to the bridge program of the following types:
 <br/>
+<br/>
 <UnorderedList>
 <ListItem>System Demonstration – up to 4 pages (include description of the demo and a screenshot or link)</ListItem>
 <ListItem>Position papers – up to 4-8 pages (excluding references)</ListItem>
@@ -119,13 +152,36 @@ We solicit submissions relevant to the bridge program of the following types:
 <br/>
 <br/>
 </p>
-<h3 class="sub-sub-title"  ><u><b style={{ fontWeight: 1000 }}>Important Dates</b></u></h3>
+<h3 class="sub-sub-title"  ><b style={{ fontWeight: 1000 }}>Important Dates</b></h3>
 <br />
 <p>
-<UnorderedList>
-<ListItem>Paper submission deadline: Sunday, November 24, 2024 (AOE)</ListItem>
-<ListItem>Paper acceptance notification: Monday, December 9, 2024 (AOE)</ListItem>
-</UnorderedList>
+
+
+<Column lg={16} md={8} sm={4}>
+                <ProgressIndicator
+                vertical
+                currentIndex={1}
+                  style={{ marginTop: '15px', fontSize: '2em' }}>
+                  <ProgressStep
+                  
+                    label="Call for Papers"
+                    secondaryLabel="Open"
+                  />
+                  <ProgressStep
+                    label="Submissions Due: November 24th, 2024"
+                  />
+                  <ProgressStep
+                    label="Author Notifications: December 9th, 2024"
+                  />
+                  <ProgressStep
+                    
+                    label="PLAN-FM at AAAI 2025"
+                    secondaryLabel="Feb 25 or 26, 2025"
+                  />
+                </ProgressIndicator>
+              </Column>
+
+
 <br/>
 <br/>
 Papers must be formatted in AAAI two-column, camera-ready style; see the <a href="https://aaai.org/authorkit25/">AAAI-25 author kit for details</a>.
@@ -134,6 +190,9 @@ Paper submissions should be made through easychair:  <a href="https://easychair.
 </p>
 <br/>
 <br/>
+
+
+
 <br/>
 <br/>
 <br/>
