@@ -56,35 +56,6 @@ const LandingPage = props => {
             style={{ textDecoration: 'none' }}>AAAI 2025</a></h5>
           <h5>Philadelphia, Pennsylvania, USA</h5>
           <br />
-
-
-<Column lg={16} md={8} sm={4}>
-                <ProgressIndicator
-              
-                currentIndex={1}
-                  style={{ marginTop: '15px', fontSize: '2em' }}>
-                  <ProgressStep
-                  
-                    label="CFP"
-                    secondaryLabel="Open"
-                  />
-                  <ProgressStep
-                    label="Submissions Due"
-                    secondaryLabel="November 24th, 2024"
-                  />
-                  <ProgressStep
-                    label="Author Notifications"
-                    secondaryLabel="December 9th, 2024"
-                  />
-                  <ProgressStep
-                    
-                    label="PLAN-FM "
-                    secondaryLabel="AAAI 2025"
-                  />
-                </ProgressIndicator>
-              </Column>
-          <br />
-          <br />
           <br />
           <br />
               <p>
