@@ -71,14 +71,13 @@ class OrgPage extends React.Component {
 <br/><br/>
             <h4>Advising Team</h4>
             <hr />
-            <StructuredListBody>
+            <Grid>
               {AdvisorList.map((item, key) => (
                 <React.Fragment key={key}>
-                  <Advisor props={item} />
+                  <Instructor props={item} />
                 </React.Fragment>
               ))}
-            </StructuredListBody>
-
+            </Grid>
             <br />
             <hr/>
             Contact: <a href="mailto:plan-fm-bridge@googlegroups.com">plan-fm-bridge@googlegroups.com</a>

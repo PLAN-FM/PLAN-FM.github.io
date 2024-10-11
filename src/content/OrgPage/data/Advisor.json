@@ -3,18 +3,21 @@
         "id": 0,
         "name": "Biplav Srivastava",
         "affiliation": "University of South Carolina",
-        "link": "https://sites.google.com/site/biplavsrivastava"
+        "link": "https://sites.google.com/site/biplavsrivastava",
+        "image": "biplav"
     },
     {
         "id": 1,
         "name": "Sriraam Natarajan",
         "affiliation": "The University of Texas at Dallas",
-        "link": "https://personal.utdallas.edu/~sriraam.natarajan/"
+        "link": "https://personal.utdallas.edu/~sriraam.natarajan/",
+              "image": "sriraam"
     },
     {
         "id": 2,
         "name": "Subbarao Khambampati",
         "affiliation": "Arizona State University",
-        "link": "https://rakaposhi.eas.asu.edu"
+        "link": "https://rakaposhi.eas.asu.edu",
+              "image": "rao"
     }    
 ]

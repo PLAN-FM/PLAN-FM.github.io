@@ -110,6 +110,7 @@ We also accept submissions of abstracts, demonstrations as well as position pape
 <br />
 <p>
 We solicit submissions relevant to the bridge program of the following types:
+<br/>
 <UnorderedList>
 <ListItem>System Demonstration – up to 4 pages (include description of the demo and a screenshot or link)</ListItem>
 <ListItem>Position papers – up to 4-8 pages (excluding references)</ListItem>
@@ -122,8 +123,8 @@ We solicit submissions relevant to the bridge program of the following types:
 <br />
 <p>
 <UnorderedList>
-<ListItem><b>Paper submission deadline:</b> Sunday, November 24, 2024 (AOE)</ListItem>
-<ListItem><b>Paper acceptance notification:</b> Monday, December 9, 2024 (AOE)</ListItem>
+<ListItem>Paper submission deadline: Sunday, November 24, 2024 (AOE)</ListItem>
+<ListItem>Paper acceptance notification: Monday, December 9, 2024 (AOE)</ListItem>
 </UnorderedList>
 <br/>
 <br/>
