@@ -98,7 +98,7 @@ The bridge will provide a rich program of activities, including tutorials, panel
 <br/>
 <br/>
 <p>
-We also accept submissions of tutorial, abstracts, demonstrations as well as position papers. We plan to adjust the length of the bridge program depending on the number of received submissions. 
+We also accept submissions of abstracts, demonstrations as well as position papers. 
 </p>
 
 
@@ -111,8 +111,7 @@ We also accept submissions of tutorial, abstracts, demonstrations as well as pos
 <p>
 We solicit submissions relevant to the bridge program of the following types:
 <UnorderedList>
-<ListItem>Tutorial – include outline of the tutorial, length (up to 1 hour), topic, name and short bios of the presenters</ListItem>
-<ListItem>System Demonstration – include description of the demo</ListItem>
+<ListItem>System Demonstration – up to 4 pages (include description of the demo and a screenshot or link)</ListItem>
 <ListItem>Position papers – up to 4-8 pages (excluding references)</ListItem>
 <ListItem>Abstracts – up to 2 pages (excluding references)</ListItem>
 </UnorderedList>
