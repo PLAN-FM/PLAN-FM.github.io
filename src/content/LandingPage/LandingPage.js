@@ -54,6 +54,7 @@ import {
 let ProgramList = require('./data/program.json');
 
 const LandingPage = props => {
+  
   return (
     <div
       style={{
@@ -64,7 +65,7 @@ const LandingPage = props => {
         margin: '0px auto auto auto'
       }}>
           
-            <span class="sub-title">PLAN-FM</span>
+            <span className="sub-title">PLAN-FM</span>
           <br />
           <br />
           <h2 className="">
@@ -96,7 +97,7 @@ In this bridge, we aim to foster interactions between NLP, Planning and Robotics
           <br />
           <br />
           <br />
-<h3 class="sub-sub-title"> Call for Papers</h3>
+<h3 className="sub-sub-title"> Call for Papers</h3>
 <hr />
 <br />
              
@@ -112,16 +113,18 @@ In this bridge, we aim to foster interactions between NLP, Planning and Robotics
  <ListItem> What are the key evaluation considerations and metrics that should be used to assess the reliability of planning approaches, and what tools can be leveraged across communities to facilitate this evaluation?</ListItem>
  <ListItem> What are the characteristics in future foundation models that can help planning? </ListItem>
 </UnorderedList>
-<p>
+
 
 <br/>
 <h5>Submission Instructions</h5>
+<p>
 <br/>
 Papers must be formatted in AAAI two-column, camera-ready style; see the <a href="https://aaai.org/authorkit25/">AAAI-25 author kit for details</a>.
 <br/>
 Paper submissions should be made through easychair:  <a href="https://easychair.org/conferences/?conf=planfm2025">https://easychair.org/conferences/?conf=planfm2025</a>
 <br/>
 <br/>
+</p>
 <UnorderedList>
 <ListItem>System Demonstration – up to 4 pages (include description of the demo and a screenshot or link)</ListItem>
 <ListItem>Position papers – up to 4-8 pages (excluding references)</ListItem>
@@ -133,19 +136,18 @@ Paper submissions should be made through easychair:  <a href="https://easychair.
                 kind="info"
                 lowContrast
                 hideCloseButton
-                subtitle={<span>Have a full paper? Please checkout AAAI Workshop on Planning in the Era of LLMs.  https://llmforplanning.github.io/</span>}
+                subtitle="Have a full paper? Please checkout AAAI Workshop on Planning in the Era of LLMs.  https://llmforplanning.github.io/"
                 timeout={0}
                 title="Sister Venue"
-                actionButtonLabel="LLM4Plans"
               />
 
 
 <br/>
 <br/>
-</p>
-<h3 class="sub-sub-title"  ><b style={{ fontWeight: 1000 }}>Important Dates</b></h3>
+
+<h3 className="sub-sub-title"  ><b style={{ fontWeight: 1000 }}>Important Dates</b></h3>
 <br />
-<p>
+
 
 
 <Column lg={16} md={8} sm={4}>
@@ -175,45 +177,10 @@ Paper submissions should be made through easychair:  <a href="https://easychair.
 
 <span style={{color: '#525252'}}>All deadlines are AoE</span>
 <br/>
-</p>
+
 <br/>
 <br/>
 
-
-<br />
-          <br />
-<h3 class="sub-sub-title"> Schedule </h3>
-<hr />
-<br />
-{/* <p>
-<StructuredListWrapper aria-label="Structured list">
-                <StructuredListBody>
-
-                {ProgramList.map((item, key) => (
-                <React.Fragment key={key}>
-                   <ProgramRow props={item} />
-                </React.Fragment>
-              ))}
-                </StructuredListBody>
-              </StructuredListWrapper>
-</p> */}
-
-<Table >
-<TableHead>
-              <TableRow>
-                  <TableHeader >
-                  Time</TableHeader>
-                  <TableHeader>Program</TableHeader>
-              </TableRow>
-              </TableHead>
-              <TableBody>
-        {ProgramList.map((item,key) =>  <React.Fragment key={key}>
-                   <ProgramRow props={item} />
-                </React.Fragment>)}
-      </TableBody>
-</Table>
-<br/>
-<br/>
 <br/>
 <br/>
 <br/>

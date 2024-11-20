@@ -126,13 +126,13 @@ const Instructor = props => {
             />
           </Column>
         </Grid>
-        <div style={{ textAlign: 'center' }}>
-          <Link href={props.props.link} target="_blank">
+        <span style={{ textAlign: 'center' }}>
+        <h6> <Link href={props.props.link} target="_blank">
             {props.props.name}
-          </Link>
+          </Link> </h6>
 
           <h6>{props.props.affiliation}</h6>
-        </div>
+        </span>
       </Tile>
     </Column>
   );

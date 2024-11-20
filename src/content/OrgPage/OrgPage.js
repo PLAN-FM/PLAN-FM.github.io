@@ -53,11 +53,14 @@ class OrgPage extends React.Component {
 
   render() {
     return (
-          <div style={{ minHeight: '100vh', width:"90%",
+          <div style={{
+            width: '80%',
             minHeight: '100vh',
             paddingTop: '50px',
             paddingBottom: '100px',
-            margin: '0px auto auto auto' }}>
+            margin: '0px auto auto auto'
+          }}>
+              
            
             <h4>Organizing Team</h4>
             <hr />

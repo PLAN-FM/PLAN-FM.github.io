@@ -8,6 +8,8 @@ import PageHeader from './components/PageHeader';
 import LandingPage from './content/LandingPage';
 import AboutPage from './content/AboutPage';
 import OrgPage from './content/OrgPage';
+import SchedulePage from './content/SchedulePage';
+import SpeakerPage from './content/SpeakerPage/SpeakerPage';
 
 class App extends Component {
   render() {
@@ -21,6 +23,10 @@ class App extends Component {
             <Route exact path="/org" component={OrgPage} />
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="about" component={AboutPage} />
+            <Route exact path="/schedule" component={SchedulePage} />
+            <Route exact path="schedule" component={SchedulePage} />
+            <Route exact path="/speaker" component={SpeakerPage} />
+            <Route exact path="speaker" component={SpeakerPage} />
             <Route component={LandingPage} />
           </Switch>
         </Content>

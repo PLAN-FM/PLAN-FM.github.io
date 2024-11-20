@@ -35,8 +35,7 @@ const AboutPage = props => {
           <br />
           <br />
           <h2 className="">
-            PLAN-FM: Bridging <u>Pl</u>anning <u>a</u>nd Reasoning in <u>N</u>atural
-            Language with <u>F</u>oundational <u>M</u>odels
+            About PLAN-FM
           </h2>
           <br/>
           <br />
@@ -48,7 +47,7 @@ const AboutPage = props => {
               <br />
           <br />
           <br />
-              <h3 class="sub-sub-title"> Goal of the Bridge</h3>
+              <h3> Goal of the Bridge</h3>
               <hr />
               <br />
               <p>

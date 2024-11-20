@@ -1,0 +1,87 @@
+[
+    {
+        "id": "break",
+        "time": "8:30",
+        "title": "Opening Remarks",
+        "speaker": "*TBA*",
+        "link": "#"
+    },
+     {
+        "id": "tutorial",
+        "time": "8:45",
+        "title": "Tutorial: Planning and NLP",
+        "speaker": ""
+    },
+    {
+        "id": "break",
+        "time": "10:30",
+        "title": "Coffee Break",
+        "speaker": ""
+    },
+    {
+        "id": "tutorial",
+        "time": "11:00",
+        "title": "Tutorial: Agents",
+        "speaker": ""
+    },
+    {
+        "id": "break",
+        "time": "12:00",
+        "title": "Lunch with a Mentor",
+        "speaker": ""
+    },
+    {
+        "id": "talk",
+        "time": "1:00",
+        "title": "Invited Talk",
+        "speaker": ""
+    },
+    {
+        "id": "talk",
+        "time": "1:20",
+        "title": "Invited Talk",
+        "speaker": ""
+    },
+    {
+        "id": "talk",
+        "time": "1:40",
+        "title": "Invited Talk",
+        "speaker": ""
+    },
+    {
+        "id": "talk",
+        "time": "2:00",
+        "title": "Invited Talk",
+        "speaker": ""
+    },
+    {
+        "id": "talk",
+        "time": "2:20",
+        "title": "Q & A",
+        "speaker": ""
+    },
+    {
+        "id": "talk",
+        "time": "2:30",
+        "title": "Panel",
+        "speaker": ""
+    },
+    {
+        "id": "break",
+        "time": "3:30",
+        "title": "Coffee Break",
+        "speaker": ""
+    },
+    {
+        "id": "talk",
+        "time": "4:00",
+        "title": "Contributed Talks",
+        "speaker": ""
+    },
+    {
+        "id": "talk",
+        "time": "4:50",
+        "title": "Closing Remarks",
+        "speaker": ""
+    }
+]
