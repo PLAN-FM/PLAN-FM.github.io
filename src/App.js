@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import PageHeader from './components/PageHeader';
 import LandingPage from './content/LandingPage';
+import AboutPage from './content/AboutPage';
 import OrgPage from './content/OrgPage';
 
 class App extends Component {
@@ -18,6 +19,8 @@ class App extends Component {
             <Route exact path="/" component={LandingPage} />
             <Route exact path="org" component={OrgPage} />
             <Route exact path="/org" component={OrgPage} />
+            <Route exact path="/about" component={AboutPage} />
+            <Route exact path="about" component={AboutPage} />
             <Route component={LandingPage} />
           </Switch>
         </Content>

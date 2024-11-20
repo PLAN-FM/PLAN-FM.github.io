@@ -25,7 +25,17 @@ class PageHeader extends React.Component {
               <HeaderName as={Link} to="/" prefix="AAAI 2025 Bridge:">
                 PLAN-FM
               </HeaderName>
-              <nav aria-label="Organizers" class=""  ><ul class="cds--header__menu-bar"><li class=""><a class="cds--header__menu-item" style={{padding:'10px'}}tabindex="0" href="/org"><span class="cds--text-truncate--end">Organizers</span></a></li></ul></nav>
+              <HeaderNavigation aria-label="Header">
+                <HeaderMenuItem as={Link} to="/org" className="pink-diminish">
+                Organizers
+                </HeaderMenuItem>
+                <HeaderMenuItem
+                  as={Link}
+                  to="/about"
+                  className="blue-diminish">
+                  About
+                </HeaderMenuItem>
+              </HeaderNavigation>
             </Header>
           </>
         )}

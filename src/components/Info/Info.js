@@ -6,6 +6,10 @@ import {
   StructuredListRow,
   StructuredListCell,
   Tile,
+  TableHead,
+  TableRow,
+  TableHeader,
+  TableCell,
   Link,
 } from '@carbon/react';
 
@@ -43,6 +47,64 @@ const Advisor = props => {
   );
 };
 
+const ProgramRow = props => {
+  if (props.props.id === 'break') {
+    return <TableRow key={props.props.key}>
+    <TableHeader key={props.props.key}>{props.props.time}</TableHeader>
+    <TableHeader key={props.props.key}>{props.props.title}</TableHeader>
+   </TableRow>
+   }
+  return (
+    <TableRow key={props.props.key}>
+           <TableCell key={props.props.key}>{props.props.time}</TableCell>
+           <TableCell key={props.props.key}>{props.props.title}</TableCell>
+          </TableRow>
+  );
+};
+
+
+const ProgramRow_list = props => {
+  if (props.props.id === 'break') {
+    return <BreakRow  props={props.props}/>
+   }
+  return (
+    <StructuredListRow>
+                    <StructuredListCell>{props.props.time}</StructuredListCell>
+                    <StructuredListCell>{props.props.title}</StructuredListCell>
+                    {/* <StructuredListCell>
+                      <Link
+                        href="{item.link}"
+                        target="_blank">
+                       {props.props.speaker}
+                      </Link>{' '}
+                      |{' '}
+                      {props.props.text}
+
+      
+                    </StructuredListCell> */}
+                  </StructuredListRow>
+  );
+};
+
+const BreakRow = props => {
+  return (
+    <StructuredListRow >
+                    <StructuredListCell head>{props.props.time}</StructuredListCell>
+                    <StructuredListCell head >{props.props.title}</StructuredListCell>
+                    {/* <StructuredListCell>
+                      <Link
+                        href="{item.link}"
+                        target="_blank">
+                       {props.props.speaker}
+                      </Link>{' '}
+                      |{' '}
+                      {props.props.text}
+                    </StructuredListCell> */}
+                  </StructuredListRow>
+  );
+};
+
+
 const Instructor = props => {
   return (
     <Column lg={4} md={4} sm={4}>
@@ -76,4 +138,4 @@ const Instructor = props => {
   );
 };
 
-export { Instructor, Reference, Advisor };
+export { Instructor, Reference, Advisor, ProgramRow };
