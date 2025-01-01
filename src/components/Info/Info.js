@@ -116,8 +116,8 @@ const Instructor = props => {
             sm={{ start: 2, end: 4 }}>
             <img
               style={{
-                marginTop: '20px',
-                marginBottom: '20px',
+                marginTop: '5px',
+                marginBottom: '5px',
                 borderRadius: '50%',
                 maxWidth: '100%',
               }}

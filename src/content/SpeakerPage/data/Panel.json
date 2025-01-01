@@ -19,5 +19,19 @@
         "affiliation": "SRI International",
         "link": "https://www.sri.com/people/karen-myers/",
         "image": "user"
+    },
+    {
+        "id":3,
+        "name": "Jeremy Frank",
+        "affiliation": "NASA",
+        "link": "https://www.linkedin.com/in/jeremy-frank-62141bb3/",
+        "image": "user"
+    },
+    {
+        "id":4,
+        "name": "Michael Katz",
+        "affiliation": "IBM Research",
+        "link": "https://ctpelok77.github.io",
+        "image": "michael"
     }
 ]

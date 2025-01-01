@@ -153,7 +153,7 @@ Paper submissions should be made through easychair:  <a href="https://easychair.
 <Column lg={16} md={8} sm={4}>
                 <ProgressIndicator
                 vertical
-                currentIndex={1}
+                currentIndex={3}
                   style={{ marginTop: '15px', fontSize: '2em' }}>
                   <ProgressStep
                   

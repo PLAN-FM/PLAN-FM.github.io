@@ -91,7 +91,7 @@ const SchedulePage = props => {
 </p> */}
 {/* Coming Soon */}
 <div style={{align:'center'}}>Stay Tuned for the Details!</div>
- <div style={{
+ {/* <div style={{
             width: '80%',
             minHeight: '100vh',
             paddingTop: '50px',
@@ -112,7 +112,7 @@ const SchedulePage = props => {
                 </React.Fragment>)}
       </TableBody>
 </Table>
-</div>
+</div> */}
 
 <br/>
 <br/>

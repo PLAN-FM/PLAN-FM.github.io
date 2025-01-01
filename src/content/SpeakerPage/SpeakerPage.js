@@ -28,6 +28,7 @@ import {
 
 
 let SpeakerList = require('./data/Speaker.json');
+let PanelList = require('./data/Panel.json');
 
 class SpeakerPage extends React.Component {
 
@@ -54,7 +55,17 @@ class SpeakerPage extends React.Component {
         </Grid>
 <br/><br/>
         
-      </div>
+{/* <h4>Panelist</h4>
+        <hr />
+        <Grid>
+          {PanelList.map((item, key) => (
+            <React.Fragment key={key}>
+              <Instructor props={item} />
+            </React.Fragment>
+          ))}
+        </Grid>
+<br/><br/> */}
+      </div> 
     );
   }
 }
