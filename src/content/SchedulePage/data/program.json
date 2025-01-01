@@ -9,7 +9,7 @@
      {
         "id": "tutorial",
         "time": "8:45",
-        "title": "Tutorial: Planning and NLP",
+        "title": "Tutorial",
         "speaker": ""
     },
     {
@@ -21,7 +21,7 @@
     {
         "id": "tutorial",
         "time": "11:00",
-        "title": "Tutorial: Agents",
+        "title": "Tutorial",
         "speaker": ""
     },
     {
@@ -38,32 +38,20 @@
     },
     {
         "id": "talk",
-        "time": "1:20",
+        "time": "1:30",
         "title": "Invited Talk",
         "speaker": ""
     },
     {
         "id": "talk",
-        "time": "1:40",
+        "time": "2:15",
         "title": "Invited Talk",
         "speaker": ""
     },
     {
         "id": "talk",
-        "time": "2:00",
+        "time": "2:45",
         "title": "Invited Talk",
-        "speaker": ""
-    },
-    {
-        "id": "talk",
-        "time": "2:20",
-        "title": "Q & A",
-        "speaker": ""
-    },
-    {
-        "id": "talk",
-        "time": "2:30",
-        "title": "Panel",
         "speaker": ""
     },
     {
@@ -75,7 +63,7 @@
     {
         "id": "talk",
         "time": "4:00",
-        "title": "Contributed Talks",
+        "title": "Panel",
         "speaker": ""
     },
     {

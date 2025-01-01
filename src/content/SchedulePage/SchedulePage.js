@@ -89,6 +89,8 @@ const SchedulePage = props => {
                 </StructuredListBody>
               </StructuredListWrapper>
 </p> */}
+{/* Coming Soon */}
+<div style={{align:'center'}}>Stay Tuned for the Details!</div>
  <div style={{
             width: '80%',
             minHeight: '100vh',
@@ -111,6 +113,7 @@ const SchedulePage = props => {
       </TableBody>
 </Table>
 </div>
+
 <br/>
 <br/>
 <br/>

@@ -1,3 +1,16 @@
 [
-
+    {
+        "id": 0,
+        "name": "Mak Roberts",
+        "affiliation": "US Naval Research Lab",
+        "link": "https://makro-nrl.bitbucket.io",
+        "image": "mak"
+    },
+    {
+        "id": 1,
+        "name": "Swaroop Mishra",
+        "affiliation": "Google DeepMind",
+        "link": "https://swarooprm.github.io",
+        "image": "swaroop"
+    }
 ]

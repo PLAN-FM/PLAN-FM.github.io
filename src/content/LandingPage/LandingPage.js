@@ -161,11 +161,11 @@ Paper submissions should be made through easychair:  <a href="https://easychair.
                     secondaryLabel="Open"
                   />
                   <ProgressStep
-                    label="Submissions Due: December 4th, 2024"
-                    secondaryLabel="(extended deadline)"
+                    label="Submissions Due: December 9th, 2024"
+                    secondaryLabel="(final extension)"
                   />
                   <ProgressStep
-                    label="Author Notifications: December 14th, 2024"
+                    label="Author Notifications: December 18th, 2024"
                   />
                   <ProgressStep
                     

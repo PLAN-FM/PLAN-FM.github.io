@@ -1,0 +1,80 @@
+.title {
+  font-size: 4rem;
+  font-weight: 100;
+}
+
+.sub-title {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.vertial-align-middle {
+  vertical-align: middle;
+}
+
+.videoWrapper {
+  margin: 10px;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.read-more {
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: #eaeaea;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: none;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.bx--structured-list-row:last-of-type,
+.bx--accordion__item:last-of-type {
+  border: none !important;
+}
+
+.toolbox {
+  padding-top: 20px;
+  border: #005dff solid 0.5px;
+}
+
+.cds--progress--vertical .cds--progress-label{
+  max-inline-size: 20em;
+  font-size: 0.5em;
+}
+
+.cds--progress-step {
+  position: relative;
+  display: inline-flex;
+  overflow: visible;
+  flex-direction: row;
+  inline-size: 14rem;
+  min-inline-size: 14rem;
+  }
+
+.cds--progress-label{
+  max-inline-size: 10em;
+}
+
+.cds--progress-line{
+  inline-size: 20rem;
+}
+
+.cds--data-table thead th {
+  background-color: #000000;
+  color: #FFFFFF;
+}
