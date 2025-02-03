@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Reference,
   Instructor,
+  Speaker,
   Advisor,
   Resource,
   shuffleArray,
@@ -44,12 +45,12 @@ class SpeakerPage extends React.Component {
       }}>
           
        
-        <h4>Speakers</h4>
+        <h4>Speakers and Panelists</h4>
         <hr />
         <Grid>
           {SpeakerList.map((item, key) => (
             <React.Fragment key={key}>
-              <Instructor props={item} />
+              <Speaker props={item} />
             </React.Fragment>
           ))}
         </Grid>

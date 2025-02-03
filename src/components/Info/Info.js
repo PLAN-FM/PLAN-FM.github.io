@@ -57,7 +57,11 @@ const ProgramRow = props => {
   return (
     <TableRow key={props.props.key}>
            <TableCell key={props.props.key}>{props.props.time}</TableCell>
-           <TableCell key={props.props.key}>{props.props.title}</TableCell>
+           <TableCell key={props.props.key}>{props.props.title}: <span style={{
+                fontStyle: 'italic'
+              }}>{props.props.topic}</span> <span style={{
+                fontWeight: '600'
+              }}>{props.props.speaker}</span></TableCell>
           </TableRow>
   );
 };
@@ -138,4 +142,38 @@ const Instructor = props => {
   );
 };
 
-export { Instructor, Reference, Advisor, ProgramRow };
+const Speaker = props => {
+  return (
+    <Column lg={8} md={8} sm={8}>
+      <Tile style={{ margin: '10px' }}>
+        <Grid>
+          <Column
+            lg={{ start: 2, end: 8 }}
+            md={{ start: 2, end: 8 }}
+            sm={{ start: 2, end: 8 }}>
+            <img
+              style={{
+                marginTop: '5px',
+                marginBottom: '5px',
+                borderRadius: '50%',
+                marginLeft: '20%',
+                maxWidth: '60%',
+              }}
+              src={generateImageUrl(props.props.image)}
+              alt="Carbon illustration"
+            />
+          </Column>
+        </Grid>
+        <span style={{ textAlign: 'center', maxWidth: '70%' }}>
+        <h5> <Link href={props.props.link} target="_blank">
+            {props.props.name}
+          </Link> </h5>
+          <h5>{props.props.affiliation}</h5>
+            <h6 style={{ maxWidth: '80%', marginLeft: '10%', fontWeight: '500' }}>{props.props.bio}</h6>
+        </span>
+      </Tile>
+    </Column>
+  );
+};
+
+export { Instructor, Reference, Advisor, ProgramRow, Speaker };

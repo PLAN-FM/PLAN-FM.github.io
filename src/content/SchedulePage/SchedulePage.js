@@ -77,21 +77,10 @@ const SchedulePage = props => {
           <h5>Room No: TBA</h5>
           <br />
 <br />
-{/* <p>
-<StructuredListWrapper aria-label="Structured list">
-                <StructuredListBody>
 
-                {ProgramList.map((item, key) => (
-                <React.Fragment key={key}>
-                   <ProgramRow props={item} />
-                </React.Fragment>
-              ))}
-                </StructuredListBody>
-              </StructuredListWrapper>
-</p> */}
-{/* Coming Soon */}
-<div style={{align:'center'}}>Stay Tuned for the Details!</div>
- {/* <div style={{
+
+
+ <div style={{
             width: '80%',
             minHeight: '100vh',
             paddingTop: '50px',
@@ -112,7 +101,7 @@ const SchedulePage = props => {
                 </React.Fragment>)}
       </TableBody>
 </Table>
-</div> */}
+</div> 
 
 <br/>
 <br/>

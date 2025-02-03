@@ -2,15 +2,13 @@
     {
         "id": "break",
         "time": "8:30",
-        "title": "Opening Remarks",
-        "speaker": "*TBA*",
-        "link": "#"
+        "title": "Opening Remarks"
     },
      {
         "id": "tutorial",
         "time": "8:45",
         "title": "Tutorial",
-        "speaker": ""
+        "topic": "Planning and NLP"
     },
     {
         "id": "break",
@@ -22,36 +20,67 @@
         "id": "tutorial",
         "time": "11:00",
         "title": "Tutorial",
+        "topic": "Language Agents"
+    },
+    {
+        "id": "talk",
+        "time": "11:40",
+        "title": "Invited Talk",
+        "speaker": "Swaroop Mishra",
+        "topic": ""
+    },
+    {
+        "id": "talk",
+        "time": "12:10",
+        "title": "Contributed Talk",
+        "topic": "Generic-to-Specific Reasoning and Learning for Ad Hoc Teamwork",
+        "speaker": ""
+    },
+    {
+        "id": "talk",
+        "time": "12:20",
+        "title": "Contributed Talk",
+        "topic": "FixMyPlan: Leveraging Large Language Models to Fix Ill-Defined Models and Incorrect Plans",
         "speaker": ""
     },
     {
         "id": "break",
-        "time": "12:00",
+        "time": "12:30",
         "title": "Lunch with a Mentor",
         "speaker": ""
     },
     {
         "id": "talk",
-        "time": "1:00",
-        "title": "Invited Talk",
+        "time": "1:55",
+        "title": "Contributed Talk",
+        "topic": "L2P: A Python Toolkit for Automated PDDL Model Generation with Large Language Models",
         "speaker": ""
     },
     {
         "id": "talk",
-        "time": "1:30",
-        "title": "Invited Talk",
+        "time": "2:05",
+        "title": "Contributed Talk",
+        "topic": "From Semantic Understanding to Geometric Features: Using Foundation Models for Novel Robotic Tasks",
         "speaker": ""
     },
     {
         "id": "talk",
         "time": "2:15",
         "title": "Invited Talk",
-        "speaker": ""
+        "speaker": "Mak Roberts"
     },
     {
         "id": "talk",
         "time": "2:45",
-        "title": "Invited Talk",
+        "title": "Distinguished Talk",
+        "speaker": "Karen Myers",
+        "topic": "AI Planning: From Shakey Foundations to a Chatty Future, "
+    },
+    {
+        "id": "talk",
+        "time": "3:20",
+        "title": "Contributed Talk",
+        "topic": "Towards a More Rigorous PDDL Generation Benchmark, or, (:goal (benchmark pddl_generators))",
         "speaker": ""
     },
     {
@@ -64,11 +93,11 @@
         "id": "talk",
         "time": "4:00",
         "title": "Panel",
-        "speaker": ""
+        "topic": "Planning in Natural Language with LLMs"
     },
     {
-        "id": "talk",
-        "time": "4:50",
+        "id": "break",
+        "time": "5:15",
         "title": "Closing Remarks",
         "speaker": ""
     }
