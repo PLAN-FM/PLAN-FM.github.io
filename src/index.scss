@@ -26,3 +26,8 @@
     padding-right: 20px;
   }
 }
+
+// To display the navigation panel in mobile.
+.cds--header__nav {
+  display: contents; 
+}
