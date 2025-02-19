@@ -30,15 +30,12 @@ class PageHeader extends React.Component {
           
             <Header aria-label="Header">
               <SkipToContent />
-              <HeaderName as={Link} to="/" prefix="AAAI 2025 Bridge:">
-                PLAN-FM
+              <HeaderName  prefix='' >
+                
               </HeaderName>
               <HeaderNavigation aria-label="Header">
               <HeaderMenuItem as={Link}  to="/home" >
                 Home
-                </HeaderMenuItem>
-                <HeaderMenuItem as={Link} to="/org" >
-                Organizers
                 </HeaderMenuItem>
                
                 <HeaderMenuItem
@@ -55,6 +52,10 @@ class PageHeader extends React.Component {
                   as={Link}
                   to="/about">
                   About
+                </HeaderMenuItem>
+
+                <HeaderMenuItem as={Link} to="/org" >
+                Organizers
                 </HeaderMenuItem>
               </HeaderNavigation>
             </Header>

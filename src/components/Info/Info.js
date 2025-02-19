@@ -178,13 +178,13 @@ const Instructor = props => {
 
 const Speaker = props => {
   return (
-    <Column lg={8} md={8} sm={8}>
+    <Column lg={8} md={8} sm={4}>
       <Tile style={{ margin: '10px' }}>
         <Grid>
           <Column
             lg={{ start: 2, end: 8 }}
             md={{ start: 2, end: 8 }}
-            sm={{ start: 2, end: 8 }}>
+            sm={{ start: 2, end: 4 }}>
             <img
               style={{
                 marginTop: '5px',
