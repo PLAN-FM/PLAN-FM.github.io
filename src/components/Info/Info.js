@@ -1,13 +1,16 @@
 import React from 'react';
-import { Document } from '@carbon/icons-react';
+import { BorderFull, Document } from '@carbon/icons-react';
 import {
   Grid,
   Column,
   StructuredListRow,
   StructuredListCell,
   Tile,
+  Table,
   TableHead,
   TableRow,
+  TableExpandRow,
+  TableExpandedRow,
   TableHeader,
   TableCell,
   Link,
@@ -54,6 +57,37 @@ const ProgramRow = props => {
     <TableHeader key={props.props.key}>{props.props.title}</TableHeader>
    </TableRow>
    }
+  if (props.props.id === 'expand') {
+    return  <React.Fragment><TableRow key={props.props.key}>
+            <TableCell key={props.props.key}>{props.props.time}</TableCell>
+            <TableCell key={props.props.key}><span >{props.props.title}: </span><span style={{
+                fontWeight: '600',
+                color : "rgb(89 132 223)",
+              }}>{props.props.speaker}</span>
+              
+              </TableCell>
+          </TableRow>
+          <TableRow key={props.props.key} style={{
+                 marginBottom: "2em",
+                 marginTop: "1em",
+                 BorderFull: "1em"}}>
+            <TableCell key={props.props.key} colSpan={2} ><p style={{
+                fontWeight: '550',
+                 fontStyle: 'italic',
+                 marginBottom: "1em",
+                 marginTop: "1em",
+                 color : "rgb(89 132 223)",
+                 textAlign : "center"
+              }}>{props.props.topic}</p> <p style={{
+                 marginBottom: "1em",
+                 marginTop: "1em",
+                 color : "rgb(34 99 237)"
+              }}>
+              {props.props.abstract}</p>
+              </TableCell>
+          </TableRow>
+          </React.Fragment>
+  } 
   return (
     <TableRow key={props.props.key}>
            <TableCell key={props.props.key}>{props.props.time}</TableCell>

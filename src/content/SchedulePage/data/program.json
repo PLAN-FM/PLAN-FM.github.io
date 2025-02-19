@@ -1,12 +1,12 @@
 [
     {
         "id": "break",
-        "time": "8:30",
+        "time": "9:00",
         "title": "Opening Remarks"
     },
      {
         "id": "tutorial",
-        "time": "8:45",
+        "time": "9:10",
         "title": "Tutorial",
         "topic": "Planning and NLP"
     },
@@ -23,11 +23,11 @@
         "topic": "Language Agents"
     },
     {
-        "id": "talk",
+        "id": "expand",
         "time": "11:40",
         "title": "Invited Talk",
         "speaker": "Swaroop Mishra",
-        "topic": ""
+        "topic": "TBA"
     },
     {
         "id": "talk",
@@ -64,17 +64,20 @@
         "speaker": ""
     },
     {
-        "id": "talk",
+        "id": "expand",
         "time": "2:15",
         "title": "Invited Talk",
-        "speaker": "Mak Roberts"
+        "speaker": "   Mak Roberts",
+"abstract": "This talk highlights my long-running research vision that I call Conversational Companions, which are agents that can interact with humans in dialog while also tracking historical context of the relationship over time. After providing an “escalator pitch” where two friendly colleagues reconnect while taking an escalator to the next session, I discuss elements that will be required for such companions.  I frame the challenge problem from the perspective of logic, cognitive architectures, and model manipulation and I tie themes back to the bridge program.  Furthermore, I describe some gotchas that I think need more work.  With these framing concepts, I present a list of possible requirements. ",
+"topic":"Conversational Companions: A Challenge Problem"
     },
     {
-        "id": "talk",
+        "id": "expand",
         "time": "2:45",
         "title": "Distinguished Talk",
-        "speaker": "Karen Myers",
-        "topic": "AI Planning: From Shakey Foundations to a Chatty Future, "
+        "speaker": "   Karen Myers",
+        "topic": "AI Planning: From Shakey Foundations to a Chatty Future",
+        "abstract": ""
     },
     {
         "id": "talk",
@@ -97,7 +100,7 @@
     },
     {
         "id": "break",
-        "time": "5:15",
+        "time": "5:00",
         "title": "Closing Remarks",
         "speaker": ""
     }

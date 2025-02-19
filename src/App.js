@@ -18,16 +18,18 @@ class App extends Component {
         <PageHeader />
         <Content>
           <Switch>
-            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/" component={SchedulePage} />
             <Route exact path="org" component={OrgPage} />
             <Route exact path="/org" component={OrgPage} />
             <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/home" component={LandingPage} />
+            <Route exact path="home" component={LandingPage} />
             <Route exact path="about" component={AboutPage} />
             <Route exact path="/schedule" component={SchedulePage} />
             <Route exact path="schedule" component={SchedulePage} />
             <Route exact path="/speaker" component={SpeakerPage} />
             <Route exact path="speaker" component={SpeakerPage} />
-            <Route component={LandingPage} />
+            <Route component={SchedulePage} />
           </Switch>
         </Content>
       </>

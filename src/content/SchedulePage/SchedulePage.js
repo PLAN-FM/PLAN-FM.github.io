@@ -33,6 +33,7 @@ import {
   TableRow,
   TableExpandHeader,
   TableHeader,
+  getExpandHeaderProps,
   TableBody,
   TableExpandRow,
   TableCell,
@@ -74,7 +75,7 @@ const SchedulePage = props => {
             style={{ textDecoration: 'none' }}>AAAI 2025</a></h5>
           <h5>February 26th,</h5>
           <h5>Philadelphia, Pennsylvania, USA</h5>
-          <h5>Room No: TBA</h5>
+          <h5>Room No: 120C</h5>
           <br />
 <br />
 

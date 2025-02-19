@@ -34,7 +34,7 @@ class PageHeader extends React.Component {
                 PLAN-FM
               </HeaderName>
               <HeaderNavigation aria-label="Header">
-              <HeaderMenuItem as={Link}  to="/" >
+              <HeaderMenuItem as={Link}  to="/home" >
                 Home
                 </HeaderMenuItem>
                 <HeaderMenuItem as={Link} to="/org" >

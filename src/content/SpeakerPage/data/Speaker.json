@@ -4,7 +4,8 @@
         "name": "Mak Roberts",
         "affiliation": "US Naval Research Lab",
         "link": "https://makro-nrl.bitbucket.io",
-        "image": "mak"
+        "image": "mak",
+        "bio": "Mark “Mak” Roberts is a Research Scientist at the Naval Research Laboratory who works in Automated Planning, Machine Learning, and Integrating Planning and Learning into interactive and applied AI systems."
     },
     {
         "id": 1,
