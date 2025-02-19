@@ -34,28 +34,18 @@ class PageHeader extends React.Component {
                 
               </HeaderName>
               <HeaderNavigation aria-label="Header">
-              <HeaderMenuItem as={Link}  to="/home" >
-                Home
-                </HeaderMenuItem>
                
                 <HeaderMenuItem
                   as={Link}
-                  to="/schedule">
-                  Schedule
+                  to="/">
+                  Home
                 </HeaderMenuItem>
-                <HeaderMenuItem
-                  as={Link}
-                  to="/speaker">
-                  Speakers
-                </HeaderMenuItem>
+
+            
                 <HeaderMenuItem
                   as={Link}
                   to="/about">
                   About
-                </HeaderMenuItem>
-
-                <HeaderMenuItem as={Link} to="/org" >
-                Organizers
                 </HeaderMenuItem>
               </HeaderNavigation>
             </Header>

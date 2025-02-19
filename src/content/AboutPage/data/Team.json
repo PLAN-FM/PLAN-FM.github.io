@@ -1,0 +1,37 @@
+[
+    {
+        "id": 0,
+        "name": "Harsha Kokel",
+        "affiliation": "IBM Research",
+        "link": "http://harshakokel.com",
+        "image": "harsha"
+    },
+    {
+        "id": 1,
+        "name": "Shirin Sohrabi",
+        "affiliation": "IBM Research",
+        "link": "https://research.ibm.com/people/shirin-sohrabi",
+        "image": "shirin"
+    },
+    {
+        "id": 2,
+        "name": "Soham Dan",
+        "affiliation": "Microsoft",
+        "link": "https://sdan2.github.io",
+        "image": "soham"
+    },
+    {
+        "id": 3,
+        "name": "Manling Li",
+        "affiliation": "Northwestern University",
+        "link": "https://limanling.github.io",
+        "image": "manling"
+    },
+    {
+        "id": 4,
+        "name": "Yu Su",
+        "affiliation": "Ohio State University",
+        "link": "https://ysu1989.github.io",
+        "image": "yu"
+    }
+]

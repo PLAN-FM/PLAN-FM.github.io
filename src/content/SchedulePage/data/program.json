@@ -23,7 +23,7 @@
         "topic": "Language Agents"
     },
     {
-        "id": "expand",
+        "id": "expand-noabs",
         "time": "11:40",
         "title": "Invited Talk",
         "speaker": "Swaroop Mishra",
@@ -72,7 +72,7 @@
 "topic":"Conversational Companions: A Challenge Problem"
     },
     {
-        "id": "expand",
+        "id": "expand-noabs",
         "time": "2:45",
         "title": "Distinguished Talk",
         "speaker": "   Karen Myers",
@@ -93,10 +93,11 @@
         "speaker": ""
     },
     {
-        "id": "talk",
+        "id": "expand-noabs",
         "time": "4:00",
         "title": "Panel",
-        "topic": "Planning in Natural Language with LLMs"
+        "topic": "Planning in Natural Language with LLMs",
+        "speaker": "Michael Katz, Swaroop Mishra, Karen Myers, Mak Roberts"
     },
     {
         "id": "break",

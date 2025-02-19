@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  ProgramRow
+  ProgramRow, Speaker
 } from '../../components/Info';
 import { Reference, Instructor, Advisor } from '../../components/Info';
 import {
@@ -52,9 +52,13 @@ import {
 // }
 
 let ProgramList = require('./data/program.json');
+let SpeakerList = require('./data/Speaker.json');
+let PanelList = require('./data/Panel.json');
 
 const SchedulePage = props => {
   return (
+
+
     <div
       style={{
         width: '80%',
@@ -63,10 +67,14 @@ const SchedulePage = props => {
         paddingBottom: '100px',
         margin: '0px auto auto auto'
       }}>
-          
-            <span className="sub-title">Schedule</span>
+          <span className="sub-title">PLAN-FM</span>
           <br />
           <br />
+          <h2 className="">
+            Bridging <u>Pl</u>anning <u>a</u>nd Reasoning in <u>N</u>atural
+            Language with <u>F</u>oundational <u>M</u>odels
+          </h2>
+          <br/>
           <h5><a
             href="https://aaai.org/conference/aaai/aaai-25/"
             rel="noopener noreferrer"
@@ -88,6 +96,8 @@ const SchedulePage = props => {
             paddingBottom: '100px',
             margin: '0px auto auto auto'
           }}>
+            <h4>Schedule</h4>
+            <hr />
 <Table >
 <TableHead>
               <TableRow>
@@ -103,6 +113,29 @@ const SchedulePage = props => {
       </TableBody>
 </Table>
 </div> 
+
+
+<div style={{
+        width: '80%',
+        minHeight: '100vh',
+        paddingTop: '50px',
+        paddingBottom: '100px',
+        margin: '0px auto auto auto'
+      }}>
+          
+       
+        <h4>Speakers and Panelists</h4>
+        <hr />
+        <Grid>
+          {SpeakerList.map((item, key) => (
+            <React.Fragment key={key}>
+              <Speaker props={item} />
+            </React.Fragment>
+          ))}
+        </Grid>
+<br/><br/>
+      </div> 
+
 
 <br/>
 <br/>

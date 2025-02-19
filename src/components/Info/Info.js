@@ -57,12 +57,36 @@ const ProgramRow = props => {
     <TableHeader key={props.props.key}>{props.props.title}</TableHeader>
    </TableRow>
    }
+   if (props.props.id === 'expand-noabs') {
+    return  <React.Fragment><TableRow key={props.props.key}>
+            <TableCell key={props.props.key}>{props.props.time}</TableCell>
+            <TableCell key={props.props.key}><span >{props.props.title}: </span><span style={{
+                fontWeight: '600'
+              }}>{props.props.speaker}</span>
+              
+              </TableCell>
+          </TableRow>
+          <TableRow key={props.props.key} style={{
+                 marginBottom: "2em",
+                 marginTop: "1em",
+                 BorderFull: "1em"}}>
+            <TableCell key={props.props.key} colSpan={2} ><p style={{
+                fontWeight: '550',
+                 fontStyle: 'italic',
+                 marginBottom: "1em",
+                 marginTop: "1em",
+                 color : "rgb(89 132 223)",
+                 textAlign : "center"
+              }}>{props.props.topic}</p>
+              </TableCell>
+          </TableRow>
+          </React.Fragment>
+  } 
   if (props.props.id === 'expand') {
     return  <React.Fragment><TableRow key={props.props.key}>
             <TableCell key={props.props.key}>{props.props.time}</TableCell>
             <TableCell key={props.props.key}><span >{props.props.title}: </span><span style={{
-                fontWeight: '600',
-                color : "rgb(89 132 223)",
+                fontWeight: '600'
               }}>{props.props.speaker}</span>
               
               </TableCell>
@@ -79,8 +103,7 @@ const ProgramRow = props => {
                  color : "rgb(89 132 223)",
                  textAlign : "center"
               }}>{props.props.topic}</p> <p style={{
-                 marginBottom: "1em",
-                 marginTop: "1em",
+                 margin: "4em",
                  color : "rgb(34 99 237)"
               }}>
               {props.props.abstract}</p>

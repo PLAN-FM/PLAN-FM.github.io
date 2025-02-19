@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "name": "Mak Roberts",
+        "affiliation": "US Naval Research Lab",
+        "link": "https://makro-nrl.bitbucket.io",
+        "image": "mak",
+        "bio": "Mark “Mak” Roberts is a Research Scientist at the Naval Research Laboratory who works in Automated Planning, Machine Learning, and Integrating Planning and Learning into interactive and applied AI systems."
+    },
+    {
+        "id": 1,
+        "name": "Swaroop Mishra",
+        "affiliation": "Google DeepMind",
+        "link": "https://swarooprm.github.io",
+        "image": "swaroop"
+    },
+    {
+        "id":2,
+        "name": "Karen Myers",
+        "affiliation": "SRI International",
+        "link": "https://www.sri.com/people/karen-myers/",
+        "image": "karen",
+        "bio": "Karen Myers is the Director of SRI International’s Artificial Intelligence Center, based in Menlo Park, CA, where she leads a team of 50 scientists conducting basic and applied research in AI. Her own research focuses on intelligent systems rooted in man-machine collaboration. Myers has led the development of several AI technologies that have been successfully transitioned into operational use in areas that span collaboration tools, task management, and end-user automation. She has published more than 100 papers in the field and been awarded seven patents. Myers is a AAAI Fellow and recently received the VentureBeat Summit Women in AI Award in recognition of her research contributions. Myers has a PhD in computer science from Stanford University and a degree in piano performance from the Royal Conservatory of Music."
+    },
+    {
+        "id":4,
+        "name": "Michael Katz",
+        "affiliation": "IBM Research",
+        "link": "https://ctpelok77.github.io",
+        "image": "michael"
+    }
+]

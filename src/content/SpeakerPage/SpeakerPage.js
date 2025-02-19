@@ -55,17 +55,6 @@ class SpeakerPage extends React.Component {
           ))}
         </Grid>
 <br/><br/>
-        
-{/* <h4>Panelist</h4>
-        <hr />
-        <Grid>
-          {PanelList.map((item, key) => (
-            <React.Fragment key={key}>
-              <Instructor props={item} />
-            </React.Fragment>
-          ))}
-        </Grid>
-<br/><br/> */}
       </div> 
     );
   }
