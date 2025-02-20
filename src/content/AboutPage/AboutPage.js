@@ -241,8 +241,6 @@ Paper submissions should be made through easychair:  <a href="https://easychair.
             </Grid>
             <br />
             <hr/>
-            Contact: <a href="mailto:plan-fm-bridge@googlegroups.com">plan-fm-bridge@googlegroups.com</a>
-            <br/><br/>
           </div>
 
 <br/>

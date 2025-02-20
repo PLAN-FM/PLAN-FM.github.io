@@ -11,11 +11,14 @@ import {
   TableRow,
   TableExpandRow,
   TableExpandedRow,
+  Tooltip,
+  Button,
   TableHeader,
   TableCell,
   Link,
 } from '@carbon/react';
-
+import { Event, Star, StarFilled } from '@carbon/icons-react';
+import { CodeSnippet } from '@carbon/react/es'
 const generateImageUrl = imageUrl => {
   return `${process.env.PUBLIC_URL}/images/${imageUrl}.png`;
 };
@@ -60,24 +63,13 @@ const ProgramRow = props => {
    if (props.props.id === 'expand-noabs') {
     return  <React.Fragment><TableRow key={props.props.key}>
             <TableCell key={props.props.key}>{props.props.time}</TableCell>
-            <TableCell key={props.props.key}><span >{props.props.title}: </span><span style={{
+            <TableCell key={props.props.key}><span ><StarFilled /> {props.props.title}: </span><span style={{
                 fontWeight: '600'
-              }}>{props.props.speaker}</span>
+              }}>{props.props.speaker}</span> <StarFilled />   <br/>  <br/><span style={{
+                fontStyle: 'italic',
+                alignItems: 'center'
+              }}>{props.props.topic}</span>
               
-              </TableCell>
-          </TableRow>
-          <TableRow key={props.props.key} style={{
-                 marginBottom: "2em",
-                 marginTop: "1em",
-                 BorderFull: "1em"}}>
-            <TableCell key={props.props.key} colSpan={2} ><p style={{
-                fontWeight: '550',
-                 fontStyle: 'italic',
-                 marginBottom: "1em",
-                 marginTop: "1em",
-                 color : "rgb(89 132 223)",
-                 textAlign : "center"
-              }}>{props.props.topic}</p>
               </TableCell>
           </TableRow>
           </React.Fragment>
@@ -85,28 +77,14 @@ const ProgramRow = props => {
   if (props.props.id === 'expand') {
     return  <React.Fragment><TableRow key={props.props.key}>
             <TableCell key={props.props.key}>{props.props.time}</TableCell>
-            <TableCell key={props.props.key}><span >{props.props.title}: </span><span style={{
+            <TableCell key={props.props.key}><StarFilled />   <span >{props.props.title} </span><span style={{
                 fontWeight: '600'
-              }}>{props.props.speaker}</span>
-              
-              </TableCell>
-          </TableRow>
-          <TableRow key={props.props.key} style={{
-                 marginBottom: "2em",
-                 marginTop: "1em",
-                 BorderFull: "1em"}}>
-            <TableCell key={props.props.key} colSpan={2} ><p style={{
-                fontWeight: '550',
-                 fontStyle: 'italic',
-                 marginBottom: "1em",
-                 marginTop: "1em",
-                 color : "rgb(89 132 223)",
-                 textAlign : "center"
-              }}>{props.props.topic}</p> <p style={{
-                 margin: "4em",
-                 color : "rgb(34 99 237)"
-              }}>
-              {props.props.abstract}</p>
+              }}>{props.props.speaker}</span> <StarFilled /> <br/>    <br/> <span style={{
+                fontStyle: 'italic'
+              }}>{props.props.topic}</span>
+              <br/>
+              <br/>
+              <CodeSnippet wrapText type="multi" hideCopyButton maxCollapsedNumberOfRows="1" style={{fontFamily: "'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif"}}>{props.props.abstract}</CodeSnippet>
               </TableCell>
           </TableRow>
           </React.Fragment>
@@ -226,7 +204,7 @@ const Speaker = props => {
             {props.props.name}
           </Link> </h5>
           <h5>{props.props.affiliation}</h5>
-            <h6 style={{ maxWidth: '80%', marginLeft: '10%', fontWeight: '500' }}>{props.props.bio}</h6>
+         <CodeSnippet wrapText type="multi" hideCopyButton maxCollapsedNumberOfRows="4" style={{fontFamily: "'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif"}}>{props.props.bio}</CodeSnippet>
         </span>
       </Tile>
     </Column>

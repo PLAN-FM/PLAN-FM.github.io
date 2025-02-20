@@ -51,7 +51,6 @@ import {
 // }
 // }
 
-let ProgramList = require('./data/program.json');
 
 const LandingPage = props => {
   

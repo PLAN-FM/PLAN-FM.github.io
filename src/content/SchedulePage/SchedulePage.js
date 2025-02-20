@@ -53,7 +53,6 @@ import {
 
 let ProgramList = require('./data/program.json');
 let SpeakerList = require('./data/Speaker.json');
-let PanelList = require('./data/Panel.json');
 
 const SchedulePage = props => {
   return (
@@ -88,16 +87,17 @@ const SchedulePage = props => {
 <br />
 
 
+<h4>Schedule</h4>
+            <hr />
 
  <div style={{
-            width: '80%',
+
+width: '80%',
             minHeight: '100vh',
             paddingTop: '50px',
             paddingBottom: '100px',
             margin: '0px auto auto auto'
           }}>
-            <h4>Schedule</h4>
-            <hr />
 <Table >
 <TableHead>
               <TableRow>
@@ -113,19 +113,19 @@ const SchedulePage = props => {
       </TableBody>
 </Table>
 </div> 
-
+       
+<h4>Speakers and Panelists</h4>
+        <hr />
 
 <div style={{
-        width: '80%',
+  width: '80%',
         minHeight: '100vh',
         paddingTop: '50px',
         paddingBottom: '100px',
         margin: '0px auto auto auto'
       }}>
           
-       
-        <h4>Speakers and Panelists</h4>
-        <hr />
+
         <Grid>
           {SpeakerList.map((item, key) => (
             <React.Fragment key={key}>

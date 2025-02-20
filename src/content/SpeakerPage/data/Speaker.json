@@ -27,6 +27,7 @@
         "name": "Michael Katz",
         "affiliation": "IBM Research",
         "link": "https://ctpelok77.github.io",
-        "image": "michael"
+        "image": "michael",
+        "bio": "Michael Katz is a principal research scientist at IBM T.J. Watson Research Center. His primary research interests are in domain independent planning and in the integration of planning and RL. He was a program chair of ICAPS 2021 and currently serves as an ICAPS executive council board member and a Competition Liaison (second term). He received numerous awards for his research, including Influential Paper Award in 2023 and Best Dissertation Award in 2011 and for his domain-independent planning solvers. He was a co-organizer of seven editions of the Heuristics and Search for Domain-independent Planning (HSDIP) workshops, as well as of five of the seven editions of the Bridging the Gap Between AI Planning and Reinforcement Learning (PRL) workshop in 2020-2024, which he co-created. He is the creator and a workshop chair of the first edition of the workshop on Planning in the Era of LLMs (LM4Plan@AAAI 2025). He has given tutorials on AI Planning at AAAI/IJCAI/ICAPS. He frequently serves as an AC/SPC for AAAI/IJCAI/ICAPS."
     }
 ]

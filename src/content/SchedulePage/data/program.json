@@ -40,7 +40,7 @@
         "id": "talk",
         "time": "12:20",
         "title": "Contributed Talk",
-        "topic": "FixMyPlan: Leveraging Large Language Models to Fix Ill-Defined Models and Incorrect Plans",
+        "topic": "L2P: A Python Toolkit for Automated PDDL Model Generation with Large Language Models",
         "speaker": ""
     },
     {
@@ -53,7 +53,7 @@
         "id": "talk",
         "time": "1:55",
         "title": "Contributed Talk",
-        "topic": "L2P: A Python Toolkit for Automated PDDL Model Generation with Large Language Models",
+        "topic": "FixMyPlan: Leveraging Large Language Models to Fix Ill-Defined Models and Incorrect Plans",
         "speaker": ""
     },
     {
