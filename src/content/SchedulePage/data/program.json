@@ -20,14 +20,15 @@
         "id": "tutorial",
         "time": "11:00",
         "title": "Tutorial",
-        "topic": "Language Agents"
+        "topic": "Embodied Agents"
     },
     {
-        "id": "expand-noabs",
+        "id": "expand",
         "time": "11:40",
         "title": "Invited Talk",
-        "speaker": "Swaroop Mishra",
-        "topic": "TBA"
+        "speaker": "Michael Katz",
+        "topic": "Large Language Models for AI Planning: Efficiency and correctness through code generation",
+        "abstract": "Among the most important properties of algorithms investigated in computer science are soundness, completeness, and complexity. These properties, however, are rarely analyzed for the vast collection of recently proposed methods for planning with large language models. In this work, we alleviate this gap. We analyze these properties of using LLMs for planning and highlight that recent trends abandon both soundness and completeness for the sake of inefficiency. We propose a significantly more efficient approach, Thought of Search (ToS), that can, at the same time, maintain both soundness and completeness. We exemplify on four representative search problems, comparing to the LLM-based solutions from the literature that attempt to solve these problems. We show that by using LLMs to produce the code for the search components we can solve the entire datasets with 100% accuracy with only a few calls to the LLM. The caveat is that ToS requires a human in the loop, collaboratively producing a sound successor function and goal test. To overcome this limitation, in this work, we make a first major step towards automating ToS (AutoToS), completely taking the human out of the loop of interactions with the language model. AutoToS guides the language model step by step towards the generation of sound and complete search components, through feedback from both generic and domain specific unit tests. AutoToS achieves 100% accuracy, with a small number of feedback iterations, using LLMs of various sizes on all evaluated domains."
     },
     {
         "id": "talk",
@@ -97,7 +98,7 @@
         "time": "4:00",
         "title": "Panel",
         "topic": "Planning in Natural Language with LLMs",
-        "speaker": "Michael Katz, Swaroop Mishra, Karen Myers, Mak Roberts"
+        "speaker": "Michael Katz, Karen Myers, Mak Roberts"
     },
     {
         "id": "break",
