@@ -23,6 +23,7 @@ class App extends Component {
             <Route exact path="/org" component={OrgPage} /> */}
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/home" component={SchedulePage} />
+            <Route exact path="/2025" component={SchedulePage} />
             {/* <Route exact path="home" component={LandingPage} /> */}
             <Route exact path="about" component={AboutPage} />
             {/* <Route exact path="/schedule" component={SchedulePage} /> */}

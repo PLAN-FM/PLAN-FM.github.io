@@ -2,13 +2,35 @@
     {
         "id": "break",
         "time": "9:00",
-        "title": "Opening Remarks"
+        "title": "Opening Remarks",
+        "hasResource": "yes",
+        "resource": "slides",
+        "resourceLink": "./1_OpeningRemarks.pdf"
     },
      {
         "id": "tutorial",
         "time": "9:10",
         "title": "Tutorial",
-        "topic": "Planning and NLP"
+        "topic": "A Brief Introduction to AI Planning, by Shirin Sohrabi",
+        "hasResource": "yes",
+        "resource": "slides",
+        "resourceLink": "./2_Tutorial-Planning.pdf"
+    },{
+        "id": "tutorial",
+        "time": "9:30",
+        "title": "Tutorial",
+        "topic": "A Primer on Large Language Models, by Soham Dan",
+        "hasResource": "yes",
+        "resource": "slides",
+        "resourceLink": "./3_Tutorial_LLMs.pdf"
+    },{
+        "id": "tutorial",
+        "time": "9:50",
+        "title": "Tutorial",
+        "topic": "Benchmarks for Planning in Natural Language, by Harsha Kokel",
+        "hasResource": "yes",
+        "resource": "slides",
+        "resourceLink": "./4_Tutorial_Benchmarks.pdf"
     },
     {
         "id": "break",
@@ -48,7 +70,10 @@
         "id": "break",
         "time": "12:30",
         "title": "Lunch with a Mentor",
-        "speaker": ""
+        "speaker": "",
+        "hasResource": "yes",
+        "resource": "recommended places",
+        "resourceLink": "https://aaai.org/conference/aaai/aaai-25/aaai-25-walkable-dining/"
     },
     {
         "id": "talk",
@@ -98,7 +123,7 @@
         "time": "4:00",
         "title": "Panel",
         "topic": "Planning in Natural Language with LLMs",
-        "speaker": "Michael Katz, Karen Myers, Mak Roberts"
+        "speaker": "Michael Katz, Karen Myers, Mak Roberts, Swaroop Mishra (Remotely)"
     },
     {
         "id": "break",

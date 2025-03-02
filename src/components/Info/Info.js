@@ -54,6 +54,13 @@ const Advisor = props => {
 };
 
 const ProgramRow = props => {
+  if (props.props.hasResource === "yes" && props.props.id === 'break' ){
+    return <TableRow key={props.props.key}>
+    <TableHeader key={props.props.key}>{props.props.time}</TableHeader>
+    <TableHeader key={props.props.key}>{props.props.title} (<a target="_blank" href={props.props.resourceLink}>{props.props.resource}</a>)</TableHeader>
+   </TableRow>
+  }
+
   if (props.props.id === 'break') {
     return <TableRow key={props.props.key}>
     <TableHeader key={props.props.key}>{props.props.time}</TableHeader>
@@ -89,6 +96,16 @@ const ProgramRow = props => {
           </TableRow>
           </React.Fragment>
   } 
+  if (props.props.hasResource === "yes"  ){
+    return <TableRow key={props.props.key}>
+    <TableCell key={props.props.key}>{props.props.time}</TableCell>
+    <TableCell key={props.props.key}>{props.props.title}: <span style={{
+                fontStyle: 'italic'
+              }}>{props.props.topic}</span> <span style={{
+                fontWeight: '600'
+              }}>{props.props.speaker}</span> (<a target="_blank" href={props.props.resourceLink}>{props.props.resource}</a>)</TableCell>
+   </TableRow>
+  }
   return (
     <TableRow key={props.props.key}>
            <TableCell key={props.props.key}>{props.props.time}</TableCell>
@@ -178,6 +195,40 @@ const Instructor = props => {
 };
 
 const Speaker = props => {
+  if (props.props.image === 'swaroop') {
+    return (
+      <Column lg={8} md={8} sm={4}>
+        <Tile style={{ margin: '10px' }}>
+          <Grid>
+            <Column
+              lg={{ start: 2, end: 8 }}
+              md={{ start: 2, end: 8 }}
+              sm={{ start: 2, end: 4 }}>
+              <img
+                style={{
+                  marginTop: '5px',
+                  marginBottom: '5px',
+                  borderRadius: '50%',
+                  marginLeft: '20%',
+                  maxWidth: '60%',
+                }}
+                src={generateImageUrl(props.props.image)}
+                alt="Carbon illustration"
+              />
+            </Column>
+          </Grid>
+          <span style={{ textAlign: 'center', maxWidth: '70%' }}>
+          <h5> <Link href={props.props.link} target="_blank">
+              <s>{props.props.name}</s>
+            </Link> </h5>
+            <h5><s>{props.props.affiliation}</s></h5>
+            <h5>Talk canceled due to unforeseen circumstances.</h5>
+           <CodeSnippet wrapText type="multi" hideCopyButton maxCollapsedNumberOfRows="4" style={{fontFamily: "'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif"}}>{props.props.bio}</CodeSnippet>
+          </span>
+        </Tile>
+      </Column>
+    );
+  }
   return (
     <Column lg={8} md={8} sm={4}>
       <Tile style={{ margin: '10px' }}>
