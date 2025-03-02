@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c968a5d6.css",
-    "main.js": "/static/js/main.f263d5df.js",
+    "main.js": "/static/js/main.a3f285b7.js",
     "static/media/IBMPlexSerif-SemiBoldItalic-Cyrillic.woff2": "/static/media/IBMPlexSerif-SemiBoldItalic-Cyrillic.2861a6629748147a32ea.woff2",
     "static/media/IBMPlexSerif-SemiBoldItalic-Latin1.woff2": "/static/media/IBMPlexSerif-SemiBoldItalic-Latin1.6305238484fd3cc045b0.woff2",
     "static/media/IBMPlexSerif-Italic-Cyrillic.woff2": "/static/media/IBMPlexSerif-Italic-Cyrillic.44c432e4a678791737ca.woff2",
@@ -94,10 +94,10 @@
     "static/media/IBMPlexMono-Regular-Latin3.woff2": "/static/media/IBMPlexMono-Regular-Latin3.cacfd1d7dbd14067b970.woff2",
     "index.html": "/index.html",
     "main.c968a5d6.css.map": "/static/css/main.c968a5d6.css.map",
-    "main.f263d5df.js.map": "/static/js/main.f263d5df.js.map"
+    "main.a3f285b7.js.map": "/static/js/main.a3f285b7.js.map"
   },
   "entrypoints": [
     "static/css/main.c968a5d6.css",
-    "static/js/main.f263d5df.js"
+    "static/js/main.a3f285b7.js"
   ]
 }
