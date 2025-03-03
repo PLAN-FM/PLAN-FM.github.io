@@ -54,66 +54,35 @@ const Advisor = props => {
 };
 
 const ProgramRow = props => {
-  if (props.props.hasResource === "yes" && props.props.id === 'break' ){
-    return <TableRow key={props.props.key}>
-    <TableHeader key={props.props.key}>{props.props.time}</TableHeader>
-    <TableHeader key={props.props.key}>{props.props.title} (<a target="_blank" href={props.props.resourceLink}>{props.props.resource}</a>)</TableHeader>
-   </TableRow>
-  }
 
   if (props.props.id === 'break') {
     return <TableRow key={props.props.key}>
     <TableHeader key={props.props.key}>{props.props.time}</TableHeader>
-    <TableHeader key={props.props.key}>{props.props.title}</TableHeader>
+    <TableHeader key={props.props.key}>{props.props.title}  {props.props.hasResource ? <span>(<a target="_blank" href={props.props.resourceLink}>{props.props.resource}</a>)</span>   : '' }</TableHeader>
    </TableRow>
    }
-   if (props.props.id === 'expand-noabs') {
-    return  <React.Fragment><TableRow key={props.props.key}>
-            <TableCell key={props.props.key}>{props.props.time}</TableCell>
-            <TableCell key={props.props.key}><span ><StarFilled /> {props.props.title}: </span><span style={{
-                fontWeight: '600'
-              }}>{props.props.speaker}</span> <StarFilled />   <br/>  <br/><span style={{
-                fontStyle: 'italic',
-                alignItems: 'center'
-              }}>{props.props.topic}</span>
-              
-              </TableCell>
-          </TableRow>
-          </React.Fragment>
-  } 
   if (props.props.id === 'expand') {
     return  <React.Fragment><TableRow key={props.props.key}>
             <TableCell key={props.props.key}>{props.props.time}</TableCell>
-            <TableCell key={props.props.key}><StarFilled />   <span >{props.props.title} </span><span style={{
+            <TableCell key={props.props.key}><StarFilled />   <span >{props.props.title}: </span><span style={{
                 fontWeight: '600'
-              }}>{props.props.speaker}</span> <StarFilled /> <br/>    <br/> <span style={{
+              }}>{props.props.speaker}</span> <br/>    <br/> <span style={{
                 fontStyle: 'italic'
-              }}>{props.props.topic}</span>
-              <br/>
-              <br/>
-              <CodeSnippet wrapText type="multi" hideCopyButton maxCollapsedNumberOfRows="1" style={{fontFamily: "'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif"}}>{props.props.abstract}</CodeSnippet>
-              </TableCell>
+              }}>{props.props.topic} </span> <br/>{props.props.hasResource ?  <span><br/>(<a target="_blank" href={props.props.resourceLink}>{props.props.resource}</a> )</span> : '' }
+              {props.props.abstract ? <div>
+              <br/><CodeSnippet wrapText type="multi" hideCopyButton maxCollapsedNumberOfRows="1" style={{fontFamily: "'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif"}}>{props.props.abstract}</CodeSnippet></div>
+              : ''}</TableCell>
           </TableRow>
           </React.Fragment>
   } 
-  if (props.props.hasResource === "yes"  ){
-    return <TableRow key={props.props.key}>
-    <TableCell key={props.props.key}>{props.props.time}</TableCell>
-    <TableCell key={props.props.key}>{props.props.title}: <span style={{
-                fontStyle: 'italic'
-              }}>{props.props.topic}</span> <span style={{
-                fontWeight: '600'
-              }}>{props.props.speaker}</span> (<a target="_blank" href={props.props.resourceLink}>{props.props.resource}</a>)</TableCell>
-   </TableRow>
-  }
   return (
     <TableRow key={props.props.key}>
            <TableCell key={props.props.key}>{props.props.time}</TableCell>
            <TableCell key={props.props.key}>{props.props.title}: <span style={{
                 fontStyle: 'italic'
-              }}>{props.props.topic}</span> <span style={{
+              }}>{props.props.paper ? <a target="_blank" href={props.props.paper}> {props.props.topic}</a>: props.props.topic} </span> <span style={{
                 fontWeight: '600'
-              }}>{props.props.speaker}</span></TableCell>
+              }}>{props.props.speaker}</span> {props.props.hasResource ? <span> (<a target="_blank" href={props.props.resourceLink}>{props.props.resource}</a>) </span> : '' } </TableCell>
           </TableRow>
   );
 };
