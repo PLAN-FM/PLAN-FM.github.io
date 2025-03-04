@@ -125,15 +125,21 @@
         "title": "Distinguished Talk",
         "speaker": "   Karen Myers",
         "topic": "AI Planning: From Shakey Foundations to a Chatty Future",
-        "abstract": ""
+        "abstract": "",
+        "hasResource": "yes",
+        "resource":"slides",
+        "resourceLink":"./Shakey2ChattyFuture.pdf"
     },
     {
         "id": "talk",
         "time": "3:20",
         "title": "Contributed Talk",
         "topic": "Towards a More Rigorous PDDL Generation Benchmark, or, (:goal (benchmark pddl_generators))",
-        "speaker": "Max Zuo, Francisco Piedrahita Velez, Xiaochen Li, Michael L. Littman, Stephen H. Bach",
-        "paper": "./Paper_pddlgen.pdf"
+        "speaker": "Max Zuo, Francisco Piedrahita Velez, Xiaochen Li, Michael L. Littman, Stephen H. Bach.",
+        "hasResource": "yes",
+        "resource":"slides",
+        "paper": "./Paper_pddlgen.pdf",
+        "resourceLink": "./pddl_generator.pdf"
     },
     {
         "id": "break",
@@ -145,7 +151,7 @@
         "id": "expand-noabs",
         "time": "4:00",
         "title": "Panel",
-        "topic": "Planning in Natural Language with LLMs",
+        "topic": "Planning in Natural Language with LLMs, ",
         "speaker": "Michael Katz, Karen Myers, Mak Roberts, Swaroop Mishra (Remotely)"
     },
     {

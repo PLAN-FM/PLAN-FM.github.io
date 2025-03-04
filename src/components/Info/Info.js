@@ -58,7 +58,7 @@ const ProgramRow = props => {
   if (props.props.id === 'break') {
     return <TableRow key={props.props.key}>
     <TableHeader key={props.props.key}>{props.props.time}</TableHeader>
-    <TableHeader key={props.props.key}>{props.props.title}  {props.props.hasResource ? <span>(<a target="_blank" href={props.props.resourceLink}>{props.props.resource}</a>)</span>   : '' }</TableHeader>
+    <TableHeader key={props.props.key}>{props.props.title}  {props.props.hasResource ? <span>(<a target="_blank" href={props.props.resourceLink}>{props.props.resource}</a>)</span>   : '' } {props.props.videoLink ?  <span>(<a target="_blank" href={props.props.videoLink}>video</a>)</span> : '' }</TableHeader>
    </TableRow>
    }
   if (props.props.id === 'expand') {
@@ -68,7 +68,7 @@ const ProgramRow = props => {
                 fontWeight: '600'
               }}>{props.props.speaker}</span> <br/>    <br/> <span style={{
                 fontStyle: 'italic'
-              }}>{props.props.topic} </span> <br/>{props.props.hasResource ?  <span><br/>(<a target="_blank" href={props.props.resourceLink}>{props.props.resource}</a> )</span> : '' }
+              }}>{props.props.topic} </span> <br/>{props.props.hasResource ?  <span><br/>(<a target="_blank" href={props.props.resourceLink}>{props.props.resource}</a>)</span> : '' } {props.props.videoLink ?  <span>(<a target="_blank" href={props.props.videoLink}>video</a>)</span> : '' }
               {props.props.abstract ? <div>
               <br/><CodeSnippet wrapText type="multi" hideCopyButton maxCollapsedNumberOfRows="1" style={{fontFamily: "'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif"}}>{props.props.abstract}</CodeSnippet></div>
               : ''}</TableCell>
@@ -82,7 +82,8 @@ const ProgramRow = props => {
                 fontStyle: 'italic'
               }}>{props.props.paper ? <a target="_blank" href={props.props.paper}> {props.props.topic}</a>: props.props.topic} </span> <span style={{
                 fontWeight: '600'
-              }}>{props.props.speaker}</span> {props.props.hasResource ? <span> (<a target="_blank" href={props.props.resourceLink}>{props.props.resource}</a>) </span> : '' } </TableCell>
+              }}>{props.props.speaker}</span> {props.props.hasResource ? <span> (<a target="_blank" href={props.props.resourceLink}>{props.props.resource}</a>) </span> : '' } {props.props.videoLink ?  <span>(<a target="_blank" href={props.props.videoLink}>video</a>)</span> : '' }
+              </TableCell>
           </TableRow>
   );
 };
