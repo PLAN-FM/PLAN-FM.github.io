@@ -45,10 +45,10 @@
         "id": "tutorial",
         "time": "11:00",
         "title": "Tutorial",
-        "topic": "Embodied LLM Agents",
+        "topic": "Embodied LLM Agents, by Manling Li",
         "hasResource": "yes",
         "resource": "slides",
-        "resourceLink": "./5_Tutorial_LLMAgents.pdf",
+        "resourceLink": "./5_Tutorial_EmbodiedAgents.pdf",
         "videoLink": "https://youtu.be/OVutTCSeOKs"
     },
     {

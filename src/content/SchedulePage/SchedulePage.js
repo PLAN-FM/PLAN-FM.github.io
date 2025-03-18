@@ -126,7 +126,6 @@ width: '80%',
   width: '80%',
         minHeight: '100vh',
         paddingTop: '50px',
-        paddingBottom: '100px',
         margin: '0px auto auto auto'
       }}>
           
@@ -138,23 +137,18 @@ width: '80%',
             </React.Fragment>
           ))}
         </Grid>
-<br/><br/>
       </div> 
-
-
-      <div
-      style={{
-        minHeight: '100vh',
-        paddingTop: '50px',
-        paddingBottom: '100px',
-        margin: '0px auto auto auto'
-      }}>
-          
 
 <h3 className="sub-sub-title"> Call for Papers</h3>
 <hr />
 <br />
-             
+
+                <div
+      style={{
+        minHeight: '100vh',
+        paddingBottom: '100px',
+        margin: '0px auto auto auto'
+      }}>   
           <p>We solicit submissions relevant to the bridge program on the following topics/open questions</p>
           <br/>
 <UnorderedList>
@@ -230,21 +224,18 @@ Paper submissions should be made through easychair:  <a href="https://easychair.
               </Column>
 
 <span style={{color: '#525252'}}>All deadlines are AoE</span>
-<br/>
 </div>
-<br/>
+
+<h4>Organizing Team</h4>
+<hr />
 
 
 <div style={{
             minHeight: '100vh',
             paddingTop: '50px',
-            paddingBottom: '100px',
-            margin: '0px auto auto auto'
           }}>
               
-           
-            <h4>Organizing Team</h4>
-            <hr />
+
             <Grid>
               {TeamList.map((item, key) => (
                 <React.Fragment key={key}>
@@ -262,12 +253,9 @@ Paper submissions should be made through easychair:  <a href="https://easychair.
                 </React.Fragment>
               ))}
             </Grid>
-            <br />
             <hr/>
           </div>
 Please send your inquiries to <a href="mailto:plan-fm-bridge@googlegroups.com">plan-fm-bridge@googlegroups.com</a>
-
-<br/>
 <br/>
     </div>
   );
