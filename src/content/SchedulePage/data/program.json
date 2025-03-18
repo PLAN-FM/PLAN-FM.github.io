@@ -14,7 +14,8 @@
         "topic": "A Brief Introduction to AI Planning, by Shirin Sohrabi",
         "hasResource": "yes",
         "resource": "slides",
-        "resourceLink": "./2_Tutorial-Planning.pdf"
+        "resourceLink": "./2_Tutorial-Planning.pdf",
+        "videoLink": "https://youtu.be/KfZNoZUkZVk"
     },{
         "id": "tutorial",
         "time": "9:30",
@@ -22,7 +23,8 @@
         "topic": "A Primer on Large Language Models, by Soham Dan",
         "hasResource": "yes",
         "resource": "slides",
-        "resourceLink": "./3_Tutorial_LLMs.pdf"
+        "resourceLink": "./3_Tutorial_LLMs.pdf",
+        "videoLink": "https://youtu.be/7_UsY1H0si0"
     },{
         "id": "tutorial",
         "time": "9:50",
@@ -30,7 +32,8 @@
         "topic": "Benchmarks for Planning in Natural Language, by Harsha Kokel",
         "hasResource": "yes",
         "resource": "slides",
-        "resourceLink": "./4_Tutorial_Benchmarks.pdf"
+        "resourceLink": "./4_Tutorial_Benchmarks.pdf",
+        "videoLink": "https://youtu.be/EqDGroDklYE"
     },
     {
         "id": "break",
@@ -42,7 +45,11 @@
         "id": "tutorial",
         "time": "11:00",
         "title": "Tutorial",
-        "topic": "Embodied Agents"
+        "topic": "Embodied LLM Agents",
+        "hasResource": "yes",
+        "resource": "slides",
+        "resourceLink": "./5_Tutorial_LLMAgents.pdf",
+        "videoLink": "https://youtu.be/OVutTCSeOKs"
     },
     {
         "id": "expand",
@@ -53,6 +60,7 @@
         "resource": "slides",
         "highlight": "yes",
         "resourceLink": "./LLMs-for-Planning-ToS.pdf",
+        "videoLink":"https://youtu.be/ylKer3lehr8",
         "topic": "Large Language Models for AI Planning: Efficiency and correctness through code generation",
         "abstract": "Among the most important properties of algorithms investigated in computer science are soundness, completeness, and complexity. These properties, however, are rarely analyzed for the vast collection of recently proposed methods for planning with large language models. In this work, we alleviate this gap. We analyze these properties of using LLMs for planning and highlight that recent trends abandon both soundness and completeness for the sake of inefficiency. We propose a significantly more efficient approach, Thought of Search (ToS), that can, at the same time, maintain both soundness and completeness. We exemplify on four representative search problems, comparing to the LLM-based solutions from the literature that attempt to solve these problems. We show that by using LLMs to produce the code for the search components we can solve the entire datasets with 100% accuracy with only a few calls to the LLM. The caveat is that ToS requires a human in the loop, collaboratively producing a sound successor function and goal test. To overcome this limitation, in this work, we make a first major step towards automating ToS (AutoToS), completely taking the human out of the loop of interactions with the language model. AutoToS guides the language model step by step towards the generation of sound and complete search components, through feedback from both generic and domain specific unit tests. AutoToS achieves 100% accuracy, with a small number of feedback iterations, using LLMs of various sizes on all evaluated domains."
     },
@@ -116,7 +124,8 @@
         "title": "Invited Talk",
         "speaker": "   Mak Roberts",
 "abstract": "This talk highlights my long-running research vision that I call Conversational Companions, which are agents that can interact with humans in dialog while also tracking historical context of the relationship over time. After providing an “escalator pitch” where two friendly colleagues reconnect while taking an escalator to the next session, I discuss elements that will be required for such companions.  I frame the challenge problem from the perspective of logic, cognitive architectures, and model manipulation and I tie themes back to the bridge program.  Furthermore, I describe some gotchas that I think need more work.  With these framing concepts, I present a list of possible requirements. ",
-"topic":"Conversational Companions: A Challenge Problem"
+"topic":"Conversational Companions: A Challenge Problem",
+"videoLink": "https://youtu.be/2YV4FUaTZhQ"
     },
     {
         "id": "expand",
@@ -128,6 +137,7 @@
         "abstract": "",
         "hasResource": "yes",
         "resource":"slides",
+        "videoLink": "https://youtu.be/jVgVKG9hgMI",
         "resourceLink":"./Shakey2ChattyFuture.pdf"
     },
     {
@@ -152,7 +162,8 @@
         "time": "4:00",
         "title": "Panel",
         "topic": "Planning in Natural Language with LLMs, ",
-        "speaker": "Michael Katz, Karen Myers, Mak Roberts, Swaroop Mishra (Remotely)"
+        "speaker": "Michael Katz, Karen Myers, Mak Roberts, Swaroop Mishra (Remotely)",
+        "videoLink": "https://youtu.be/NIEZP99CSdc"
     },
     {
         "id": "break",
