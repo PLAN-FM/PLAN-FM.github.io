@@ -125,7 +125,9 @@
         "speaker": "   Mak Roberts",
 "abstract": "This talk highlights my long-running research vision that I call Conversational Companions, which are agents that can interact with humans in dialog while also tracking historical context of the relationship over time. After providing an “escalator pitch” where two friendly colleagues reconnect while taking an escalator to the next session, I discuss elements that will be required for such companions.  I frame the challenge problem from the perspective of logic, cognitive architectures, and model manipulation and I tie themes back to the bridge program.  Furthermore, I describe some gotchas that I think need more work.  With these framing concepts, I present a list of possible requirements. ",
 "topic":"Conversational Companions: A Challenge Problem",
-"videoLink": "https://youtu.be/2YV4FUaTZhQ"
+"videoLink": "https://youtu.be/2YV4FUaTZhQ",
+"resource": "slides",
+        "resourceLink": "./ConversationalCompanion.pdf"
     },
     {
         "id": "expand",
