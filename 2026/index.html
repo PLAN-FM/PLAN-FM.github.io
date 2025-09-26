@@ -10,104 +10,445 @@
 <meta name="color-scheme" content="light dark"/>
 <style>
   :root {
-    --bg: #fff;
-    --text: #1a1a1a;
-    --muted: #666;
-    --link: #0f62fe;
-    --max: 980px;
-    --space: clamp(16px, 2vw, 24px);
+    --bg: #f6f8fc;
+    --text: #0f172a;
+    --muted: #475569;
+    --link: #2563eb;
+    --hero-bg: linear-gradient(135deg, #0b1735 0%, #12355f 48%, #1f4f8d 100%);
+    --card-bg: rgba(255, 255, 255, 0.92);
+    --card-border: rgba(15, 23, 42, 0.08);
+    --shadow-sm: 0 18px 45px -30px rgba(15, 23, 42, 0.45);
+    --radius-lg: 22px;
+    --radius-md: 16px;
+    --space: clamp(16px, 2.6vw, 32px);
+  --max: 1240px;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#0b0f14; --text:#e9edf1; --muted:#9aa5b1; --link:#6aa3ff; }
+    :root {
+      --bg: #020817;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --link: #60a5fa;
+      --hero-bg: linear-gradient(135deg, #081227 0%, #0f274f 45%, #1a3c6e 100%);
+      --card-bg: rgba(15, 23, 42, 0.78);
+      --card-border: rgba(148, 163, 184, 0.18);
+      --shadow-sm: 0 20px 40px -28px rgba(15, 23, 42, 0.62);
+    }
   }
   * { box-sizing: border-box; }
-  html, body { margin:0; padding:0; background:var(--bg); color:var(--text); }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.65;
+    background: var(--bg);
+    color: var(--text);
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
   }
   a { color: var(--link); text-decoration: none; }
   a:hover, a:focus-visible { text-decoration: underline; outline: none; }
   .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--space); }
-  header { padding: 32px 0 12px; border-bottom: 1px solid rgba(0,0,0,0.06); }
-  @media (prefers-color-scheme: dark) {
-    header { border-color: rgba(255,255,255,0.08); }
+  .hero {
+    position: relative;
+    z-index: 0;
+    background: var(--hero-bg);
+    color: #f8fafc;
+    padding: 32px 0 76px;
+    overflow: hidden;
   }
-  h1 { font-size: clamp(26px, 3.2vw, 36px); margin: 0 0 6px; font-weight: 700; letter-spacing: .2px; }
-  .tagline { color: var(--muted); margin: 6px 0 0; font-size: clamp(14px, 1.8vw, 16px); }
-  main { padding: 22px 0 40px; }
-  section { margin: 24px 0; }
-  h2 { font-size: clamp(18px, 2.2vw, 22px); margin: 0 0 10px; font-weight: 600; }
-  ul { margin: 0; padding-left: 18px; }
-  li { margin: 6px 0; }
-  .note { color: var(--muted); }
-  footer { margin: 36px 0 20px; padding-top: 16px; border-top: 1px solid rgba(0,0,0,0.06); color: var(--muted); font-size: 14px; }
-  @media (prefers-color-scheme: dark) {
-    footer { border-color: rgba(255,255,255,0.08); }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: -120px -60px auto auto;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.02) 60%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
   }
-  .cta { margin: 18px 0 0; }
-  .button { display: inline-block; padding: 8px 18px; border-radius: 999px; background: var(--link); color: #fff; font-weight: 600; font-size: 15px; line-height: 1.2; transition: filter 0.2s ease; }
-  .button:hover, .button:focus-visible { text-decoration: none; filter: brightness(0.9); }
+  .hero .wrap { position: relative; z-index: 1; }
+  .top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: clamp(12px, 3vw, 28px);
+    flex-wrap: wrap;
+  }
+  .nav-tabs { list-style: none; display: flex; align-items: center; gap: clamp(10px, 1.8vw, 20px); margin: 0; padding: 0; }
+  .nav-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 999px;
+    color: rgba(248, 250, 252, 0.82);
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .nav-link:hover, .nav-link:focus-visible { background: rgba(148, 163, 184, 0.28); color: #fff; text-decoration: none; }
+  .nav-link.active { background: rgba(255,255,255,0.18); color: #fff; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.22); }
+  .hero-header {
+    margin-top: clamp(24px, 4vw, 40px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 2.2vw, 18px);
+    width: 100%;
+  }
+  .hero-title {
+    margin: 0;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    font-weight: 700;
+    color: #f8fafc;
+    width: 100%;
+  }
+  .hero-link {
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgba(248, 250, 252, 0.9);
+    text-decoration: underline;
+    text-decoration-color: rgba(248, 250, 252, 0.45);
+  }
+  .hero-link:hover, .hero-link:focus-visible { color: #fff; text-decoration-color: #fff; }
+  .hero-meta-simple {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.95rem;
+    color: rgba(241, 245, 249, 0.85);
+  }
+  main {
+    position: relative;
+    z-index: 1;
+    padding: clamp(28px, 5vw, 48px) 0 80px;
+  }
+  .wrap.stack { max-width: var(--max); margin: 0 auto; padding: 0 var(--space); display: flex; flex-direction: column; gap: clamp(24px, 3vw, 30px); }
+  .grid { display: grid; gap: clamp(18px, 2.4vw, 24px); }
+  .two-col { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .stack-sm { gap: clamp(16px, 2vw, 20px); }
+  .panel {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: clamp(24px, 3vw, 32px);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow-sm);
+  }
+  .panel h2 { margin: 0 0 16px; font-size: clamp(18px, 2.4vw, 24px); }
+  .panel h3 { margin: 16px 0 12px; font-size: 1.05rem; }
+  .schedule-table { display: flex; flex-direction: column; gap: 10px; }
+  .schedule-header {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 3vw, 32px);
+    padding: 16px clamp(18px, 3vw, 28px);
+    border-radius: var(--radius-md);
+    background: rgba(37, 99, 235, 0.18);
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .schedule-header span:first-child { flex: 0 0 110px; }
+  .schedule-header span:last-child { flex: 1; }
+  .schedule-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .schedule-item {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 3vw, 32px);
+    padding: 10px clamp(18px, 3vw, 28px);
+    border-radius: var(--radius-md);
+    background: rgba(148, 163, 184, 0.1);
+  }
+  .schedule-time {
+    flex: 0 0 110px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .schedule-program { flex: 1; color: var(--muted); }
+  .speaker-grid {
+    display: grid;
+    gap: clamp(18px, 2.4vw, 24px);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .speaker-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 18px;
+    border-radius: var(--radius-lg);
+    background: rgba(148, 163, 184, 0.12);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+  }
+  .speaker-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    background: rgba(148, 163, 184, 0.25);
+  }
+  .speaker-body { display: flex; flex-direction: column; gap: 4px; }
+  .speaker-name { margin: 0; font-size: 1.05rem; font-weight: 600; color: var(--text); }
+  .speaker-affil { margin: 0; font-size: 0.92rem; color: var(--muted); }
+  .speaker-focus { margin: 0; font-size: 0.92rem; color: var(--muted); }
+  .callout-list { margin: 0; padding-left: 20px; display: grid; gap: 8px; color: var(--muted); }
+  .callout-list li { margin: 0; }
+  .dates-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .date-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    background: rgba(148, 163, 184, 0.12);
+  }
+  .date-label { font-weight: 600; font-size: 0.95rem; color: var(--text); }
+  .date-value { font-size: 0.9rem; color: var(--muted); }
+  .team-section { display: flex; flex-direction: column; gap: clamp(18px, 2.4vw, 24px); }
+  .team-grid { display: grid; gap: clamp(16px, 2vw, 20px); grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .team-card {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    background: rgba(148, 163, 184, 0.1);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+  }
+  .team-card img {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    object-fit: cover;
+    background: rgba(148, 163, 184, 0.2);
+    flex-shrink: 0;
+  }
+  .team-info { display: flex; flex-direction: column; gap: 4px; }
+  .team-name { font-size: 1rem; font-weight: 600; color: var(--text); }
+  .team-affil { font-size: 0.9rem; color: var(--muted); }
+  .team-footnote { font-size: 0.82rem; color: var(--muted); }
+  footer { padding: 32px 0 48px; background: rgba(15, 23, 42, 0.08); }
+  .footer-grid { display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--muted); }
+  .footer-grid a { font-weight: 600; }
+  @media (prefers-color-scheme: dark) {
+    .schedule-header { background: rgba(37, 99, 235, 0.32); color: #e2e8f0; }
+    .schedule-item { background: rgba(148, 163, 184, 0.18); }
+    .speaker-card { background: rgba(15, 23, 42, 0.45); border-color: rgba(148, 163, 184, 0.26); }
+    .date-item { background: rgba(148, 163, 184, 0.16); }
+    .team-card { background: rgba(15, 23, 42, 0.36); border-color: rgba(148, 163, 184, 0.26); }
+    footer { background: rgba(15, 23, 42, 0.32); }
+  }
+  @media (max-width: 640px) {
+    .hero { padding-bottom: 60px; }
+    .top-nav { flex-direction: column; align-items: stretch; }
+    .nav-tabs { justify-content: flex-start; }
+  }
 </style>
 </head>
 <body>
+<header class="hero">
   <div class="wrap">
-    <header>
-      <h1>PLAN-FM @ AAAI 2026</h1>
-      <p class="tagline">Bridging Planning and Reasoning in Natural Language with Foundational Models</p>
-      <p class="cta"><a class="button" href="/about/">About PLAN-FM</a></p>
-    </header>
-
-    <main>
-      <section>
-        <h2>Status</h2>
-        <p>Website in progress. Call for Papers coming soon (AoE).</p>
-      </section>
-
-      <section>
-        <h2>Submission</h2>
-        <p>
-          <a href="https://openreview.net/group?id=AAAI.org/2026/Bridge/PLAN-FM" target="_blank" rel="noopener">
-            OpenReview — AAAI 2026 Bridge: PLAN-FM
-          </a>
-        </p>
-      </section>
-
-      <section>
-        <h2>Important dates</h2>
-        <ul>
-          <li><strong>Submission deadline:</strong> TBA (AoE)</li>
-          <li><strong>Notification:</strong> TBA</li>
-          <li><strong>Event date &amp; location (AAAI 2026):</strong> TBA</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>About</h2>
-        <p>PLAN-FM brings together communities in AI planning, reasoning, and foundation models to share benchmarks, methods, evaluations, and applications aimed at reliable planning and decision-making with LLMs and other FMs. <a href="/about/">Read the full overview</a>.</p>
-      </section>
-
-      <section>
-        <h2>Previous edition</h2>
-        <p><a href="/2025/">AAAI 2025 PLAN-FM</a></p>
-      </section>
-
-      <section>
-        <h2>Links</h2>
-        <p><a href="https://aaai.org/conference/aaai/aaai-26/" target="_blank" rel="noopener">AAAI-26 Conference</a></p>
-      </section>
-
-      <section>
-        <h2>Contact</h2>
-        <p><a href="mailto:plan-fm-bridge@googlegroups.com">plan-fm-bridge@googlegroups.com</a></p>
-      </section>
-
-      <footer>
-        <span class="note">Important dates: TBA (AoE). Event date &amp; location: TBA (AAAI 2026).</span>
-      </footer>
-    </main>
+    <nav class="top-nav" aria-label="Primary">
+      <ul class="nav-tabs">
+        <li><a class="nav-link active" href="/2026/">Home</a></li>
+        <li><a class="nav-link" href="/about/">About</a></li>
+        <li><a class="nav-link" href="/2025/">2025</a></li>
+      </ul>
+    </nav>
+    <div class="hero-header">
+      <h1 class="hero-title">PLAN-FM: Bridging Planning and Reasoning in Natural Language with Foundational Models</h1>
+      <a class="hero-link" href="https://aaai.org/conference/aaai/aaai-26/" target="_blank" rel="noopener">AAAI 2026</a>
+      <div class="hero-meta-simple">
+        <span>Time: January 20, 2026 (AAAI-26)</span>
+        <span>Location: TBA</span>
+      </div>
+    </div>
   </div>
+</header>
+
+<main>
+  <div class="wrap stack">
+    <section class="panel">
+      <h2>Schedule</h2>
+      <div class="schedule-table">
+        <div class="schedule-header">
+          <span>Time</span>
+          <span>Program</span>
+        </div>
+        <ul class="schedule-list">
+          <li class="schedule-item"><span class="schedule-time">9:00</span><span class="schedule-program">Opening Remarks</span></li>
+          <li class="schedule-item"><span class="schedule-time">9:10</span><span class="schedule-program">Tutorial</span></li>
+          <li class="schedule-item"><span class="schedule-time">10:30</span><span class="schedule-program">Coffee Break</span></li>
+          <li class="schedule-item"><span class="schedule-time">11:00</span><span class="schedule-program">Tutorial</span></li>
+          <li class="schedule-item"><span class="schedule-time">11:40</span><span class="schedule-program">Invited Talk</span></li>
+          <li class="schedule-item"><span class="schedule-time">12:10</span><span class="schedule-program">Contributed Talks</span></li>
+          <li class="schedule-item"><span class="schedule-time">12:30</span><span class="schedule-program">Student Mentoring Lunch Session</span></li>
+          <li class="schedule-item"><span class="schedule-time">13:55</span><span class="schedule-program">Contributed Talks</span></li>
+          <li class="schedule-item"><span class="schedule-time">14:15</span><span class="schedule-program">Invited Talk</span></li>
+          <li class="schedule-item"><span class="schedule-time">14:45</span><span class="schedule-program">Invited Talk</span></li>
+          <li class="schedule-item"><span class="schedule-time">15:20</span><span class="schedule-program">Contributed Talk</span></li>
+          <li class="schedule-item"><span class="schedule-time">15:30</span><span class="schedule-program">Coffee Break</span></li>
+          <li class="schedule-item"><span class="schedule-time">16:00</span><span class="schedule-program">Panel Discussion</span></li>
+          <li class="schedule-item"><span class="schedule-time">17:15</span><span class="schedule-program">Closing Remarks</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Speakers and Panelists (TBD)</h2>
+      <div class="speaker-grid">
+        <article class="speaker-card">
+          <img src="/2026/images/speakers/david-hsu.jpg" alt="David Hsu" loading="lazy"/>
+          <div class="speaker-body">
+            <h3 class="speaker-name">David Hsu</h3>
+            <p class="speaker-affil">National University of Singapore</p>
+            <p class="speaker-focus">Human-robot interactions</p>
+          </div>
+        </article>
+        <article class="speaker-card">
+          <img src="/2026/images/speakers/chi-wang.jpg" alt="Chi Wang" loading="lazy"/>
+          <div class="speaker-body">
+            <h3 class="speaker-name">Chi Wang</h3>
+            <p class="speaker-affil">Google DeepMind</p>
+            <p class="speaker-focus">Agentic AI frameworks</p>
+          </div>
+        </article>
+        <article class="speaker-card">
+          <img src="/2026/images/speakers/furong-huang.jpg" alt="Furong Huang" loading="lazy"/>
+          <div class="speaker-body">
+            <h3 class="speaker-name">Furong Huang</h3>
+            <p class="speaker-affil">University of Maryland</p>
+            <p class="speaker-focus">Foundational models for sequential decision making</p>
+          </div>
+        </article>
+        <article class="speaker-card">
+          <img src="/2026/images/speakers/sergey-levine.jpg" alt="Sergey Levine" loading="lazy"/>
+          <div class="speaker-body">
+            <h3 class="speaker-name">Sergey Levine</h3>
+            <p class="speaker-affil">University of California, Berkeley</p>
+            <p class="speaker-focus">Robotics and autonomous decision making</p>
+          </div>
+        </article>
+        <article class="speaker-card">
+          <img src="/2026/images/speakers/nir-lipovetzky.jpg" alt="Nir Lipovetzky" loading="lazy"/>
+          <div class="speaker-body">
+            <h3 class="speaker-name">Nir Lipovetzky</h3>
+            <p class="speaker-affil">The University of Melbourne</p>
+            <p class="speaker-focus">Planning and sequential decision making</p>
+          </div>
+        </article>
+        <article class="speaker-card">
+          <img src="/2026/images/speakers/kartik-talamadupula.jpg" alt="Kartik Talamadupula" loading="lazy"/>
+          <div class="speaker-body">
+            <h3 class="speaker-name">Kartik Talamadupula</h3>
+            <p class="speaker-affil">Wand (Synthesis AI)</p>
+            <p class="speaker-focus">Planning and agentic AI</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Call for Papers</h2>
+      <p>The 2nd PLAN-FM Bridge Program invites cutting-edge research on leveraging foundational models—large language models, large reasoning models, and multimodal systems—for multi-step reasoning and planning. Since 2025, large reasoning models and RL-tuned variants have advanced markedly; hybrid pipelines (LLM + classical planner/verifier) are maturing; and new cross-domain benchmarks expose persistent gaps in executability and robustness. We solicit papers on scalable, grounded, and verifiable planning with foundational models across the topics below.</p>
+      <h3>Topics of interest</h3>
+      <ul class="callout-list">
+        <li><strong>FM for Planning &amp; Decision-Making:</strong> Prompting and training for long-horizon control, plan decomposition, and search efficiency.</li>
+        <li><strong>Embodied &amp; Multi-Agent Planning:</strong> Robotics, autonomy, coordination, and human-in-the-loop planning under real-world constraints.</li>
+        <li><strong>Reliability, Safety &amp; Guarantees (New emphasis):</strong> Verified and executable plans, constraint satisfaction, formal checks, and failure analysis.</li>
+        <li><strong>Planner-in-the-Loop Tool Use:</strong> Integration with symbolic planners, search (A*, MCTS), simulators, program synthesis, knowledge bases, and environment feedback.</li>
+        <li><strong>Benchmarks &amp; Shared Resources:</strong> Cross-domain datasets and simulators, standardized tasks for reproducible, apples-to-apples comparisons.</li>
+        <li><strong>Plan Quality &amp; Stress-Testing:</strong> Metrics and toolkits for executability, optimality, generalization, and efficiency, including leaderboards and robustness suites.</li>
+        <li><strong>Next-Gen FM Ingredients:</strong> Memory and state tracking, long-context handling, world models, multimodal grounding, and modular architectures for planning.</li>
+      </ul>
+      <h3>Submission instructions</h3>
+      <p>Papers should follow the <a href="https://aaai.org/authorkit26-1/" target="_blank" rel="noopener">AAAI-26 author kit</a>. Submit through <a href="https://openreview.net/group?id=AAAI.org/2026/Bridge/PLAN-FM" target="_blank" rel="noopener">OpenReview Portal</a>. We welcome multiple contribution types:</p>
+      <ul class="callout-list">
+        <li><strong>System Demonstrations</strong> – up to 4 pages (plus references), showcasing innovative systems or prototypes, including a description and optional screenshot or link.</li>
+        <li><strong>Position Papers</strong> – 4 to 8 pages (excluding references), describing novel ideas, perspectives, or early research results.</li>
+        <li><strong>Extended Abstracts</strong> – up to 2 pages (excluding references), summarizing late-breaking results, preliminary findings, or challenges to provoke discussion.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Important Dates</h2>
+      <ul class="dates-list">
+        <li class="date-item"><span class="date-label">Submission deadline</span><span class="date-value">October 31, 2025 (AoE)</span></li>
+        <li class="date-item"><span class="date-label">Notifications of acceptance</span><span class="date-value">November 14, 2025</span></li>
+        <li class="date-item"><span class="date-label">PLAN-FM @ AAAI-26</span><span class="date-value">January 20, 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="panel team-section">
+      <h2>Organizing Committee</h2>
+      <div class="team-grid">
+        <article class="team-card">
+          <img src="/2026/images/wenjuan.png" alt="Wenjun Li" loading="lazy"/>
+          <div class="team-info">
+            <span class="team-name">Wenjun Li<sup>1</sup></span>
+            <span class="team-affil">Singapore Management University</span>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="/2026/images/kangrui.png" alt="Kangrui Wang" loading="lazy"/>
+          <div class="team-info">
+            <span class="team-name">Kangrui Wang<sup>2</sup></span>
+            <span class="team-affil">Northwestern University</span>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="/2026/images/harsha.png" alt="Harsha Kokel" loading="lazy"/>
+          <div class="team-info">
+            <span class="team-name">Harsha Kokel<sup>3</sup></span>
+            <span class="team-affil">IBM Research</span>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="/2026/images/shirin.png" alt="Shirin Sohrabi" loading="lazy"/>
+          <div class="team-info">
+            <span class="team-name">Shirin Sohrabi<sup>3</sup></span>
+            <span class="team-affil">IBM Research</span>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="/2026/images/manling.png" alt="Manling Li" loading="lazy"/>
+          <div class="team-info">
+            <span class="team-name">Manling Li<sup>2</sup></span>
+            <span class="team-affil">Northwestern University</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel team-section">
+      <h2>Advising Committee</h2>
+      <div class="team-grid">
+        <article class="team-card">
+          <img src="/2026/images/biplav.png" alt="Biplav Srivastava" loading="lazy"/>
+          <div class="team-info">
+            <span class="team-name">Biplav Srivastava<sup>4</sup></span>
+            <span class="team-affil">University of South Carolina</span>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="/2026/images/pradeep.png" alt="Pradeep Varakantham" loading="lazy"/>
+          <div class="team-info">
+            <span class="team-name">Pradeep Varakantham<sup>1</sup></span>
+            <span class="team-affil">Singapore Management University</span>
+          </div>
+        </article>
+      </div>
+      <p class="team-footnote">1 Singapore Management University · 2 Northwestern University · 3 IBM Research · 4 University of South Carolina</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <span>&copy; 2024–2026 PLAN-FM Organizers. Dates subject to change.</span>
+    <a href="/about/">Read more about PLAN-FM</a>
+  </div>
+</footer>
 </body>
 </html>
