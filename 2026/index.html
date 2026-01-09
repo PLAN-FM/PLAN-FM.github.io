@@ -134,13 +134,12 @@
   }
   .panel h2 { margin: 0 0 16px; font-size: clamp(18px, 2.4vw, 24px); }
   .panel h3 { margin: 16px 0 12px; font-size: 1.05rem; }
-  .schedule-table { display: flex; flex-direction: column; gap: 10px; }
+  .schedule-table { display: flex; flex-direction: column; gap: 0px; border: solid; }
   .schedule-header {
     display: flex;
     align-items: center;
     gap: clamp(16px, 3vw, 32px);
     padding: 16px clamp(18px, 3vw, 28px);
-    border-radius: var(--radius-md);
     background: rgb(1, 2, 6 );
     color: #ffffff;
     text-transform: uppercase;
@@ -150,14 +149,14 @@
   }
   .schedule-header span:first-child { flex: 0 0 110px; }
   .schedule-header span:last-child { flex: 1; }
-  .schedule-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .schedule-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0px; }
   .schedule-item {
     display: flex;
     align-items: center;
     gap: clamp(16px, 3vw, 32px);
-    padding: 10px clamp(18px, 3vw, 28px);
-    border-radius: var(--radius-md);
+    padding: 3px clamp(18px, 3vw, 28px);
     background: rgba(148, 163, 184, 0.1);
+    border: solid 1px;
   }
   .schedule-time {
     flex: 0 0 110px;
@@ -189,7 +188,7 @@ padding: 5px;
     height: 100%;
   }
   .speaker-card img {
-    width: 30%;
+    width: 80%;
     margin:auto;
     aspect-ratio: 4 / 3;
     border-radius: var(--radius-md);
@@ -267,7 +266,7 @@ padding: 5px;
     <div class="hero-header">
       <h1 class="hero-title">PLAN-FM: Bridging Planning and Reasoning in Natural Language with Foundational Models</h1>
       <a class="hero-link" href="https://aaai.org/conference/aaai/aaai-26/" target="_blank" rel="noopener">AAAI 2026</a>
-      
+      Jan 21st 2026, Singapore
     </div>
   </div>
 </header>
@@ -276,18 +275,17 @@ padding: 5px;
   <div class="wrap stack">
     <section class="panel">
       <h2>Schedule</h2>
-        <h4>Jan 21, 2026</h4>
-        <h4>Location: Topaz 220 – 225 (<a href="/2026/images/AAAI-26-Map.pdf">map</a>)</h4>
+        <h4> 9:00 AM to 5:00 PM (Singapore Time)<br> Location: <i>Topaz 220 – 225</i> (<a href="/2026/images/AAAI-26-Map.pdf">map</a>) </h4>
       <div class="schedule-table">
         <div class="schedule-header">
-          <span>Time (Singapore Time)</span>
+          <span>Time</span>
           <span>Program</span>
         </div>
 
         
         <ul class="schedule-list">
           <li class="schedule-item"><span class="schedule-time">9:00</span><span class="schedule-program">Opening Remarks</span></li>
-          <li class="schedule-item"><span class="schedule-time">9:10</span><span class="schedule-program">Tutorial <br><br></span></li>
+          <li class="schedule-item"><span class="schedule-time">9:10</span><span class="schedule-program">Tutorial</span></li>
           <li class="schedule-item" style="background:rgb(255,255,255)"><span class="schedule-time">10:30</span><span class="schedule-program">Coffee Break</span></li>
           <li class="schedule-item" style="background:rgba(212, 99, 227, 0.21)"><span class="schedule-time">11:00</span><span class="schedule-program"><b> Invited Talk </b> <br><br>
           <i><a href="https://www.comp.nus.edu.sg/~dyhsu/" target="_blank"> David Hsu</a></i></span></li>
@@ -300,18 +298,17 @@ padding: 5px;
           <li class="schedule-item"><span class="schedule-time">14:30</span><span class="schedule-program">Contributed Talk: </span></li>
           <li class="schedule-item"><span class="schedule-time">14:45</span><span class="schedule-program">Contributed Talk: </span></li>
           <li class="schedule-item" style="background:rgba(212, 99, 227, 0.21)"><span class="schedule-time">15:00</span><span class="schedule-program"><b> Invited Talk </b> 
-            <!-- <br><br>
-          <i><a href="https://pulkitverma25.github.io" target="_blank">Pulkit Verma</a></i> -->
+            <br><br>
+          <i><a href="https://asimmunawar.github.io/" target="_blank">Asim Munawar</a></i>
         </span></li>
           <li class="schedule-item" style="background:rgba(255,255,255)"><span class="schedule-time">15:30</span><span class="schedule-program">Coffee Break</span></li>
-          <li class="schedule-item"><span class="schedule-time">16:00</span><span class="schedule-program">Closing Remarks</span></li>
-          <li class="schedule-item" style="background:rgb(193, 249, 216)"><span class="schedule-time">16:05</span><span class="schedule-program">Poster Session</span></li>
+          <li class="schedule-item"  style="background:rgb(193, 249, 216)"><span class="schedule-time">16:00</span><span class="schedule-program">Closing Remarks <br> Poster Session</span></li>
         </ul>
       </div>
     </section>
 
     <section class="panel">
-      <h2>Speakers and Panelists (TBD)</h2>
+      <h2>Invited Speakers</h2>
       <div class="speaker-grid">
         <article class="speaker-card">
           <img src="/2026/images/speakers/david-hsu.jpg" alt="David Hsu" loading="lazy" width="20em"/>
@@ -321,14 +318,21 @@ padding: 5px;
           </div>
         </article>
         <article class="speaker-card">
-          <img src="/2026/images/speakers/pulkit_verma.webp" alt="Pulkit Verma" loading="lazy"/>
+          <img src="/2026/images/speakers/pulkit_verma.png" alt="Pulkit Verma" loading="lazy"/>
           <div class="speaker-body">
             <h3 class="speaker-name"><a href="https://pulkitverma25.github.io" target="_blank">Pulkit Verma</a><br>Indian Institute of Technology Madras</h3>
             <p class="speaker-affil"></p>
             <p class="speaker-bio">Bio: <br>Pulkit Verma is an Assistant Professor at the Department of Computer Science and Engineering, IIT Madras. Prior to this, he was a Postdoctoral Associate in the Interactive Robotics Group at the Massachusetts Institute of Technology, where he worked with Prof. Julie Shah. His research focuses on the safe and reliable behavior of taskable AI agents. He investigates the minimal set of requirements in an AI system that would enable a user to assess and understand the limits of its safe operability. He received his Ph.D. in Computer Science from the School of Computing and Augmented Intelligence, Arizona State University, where he worked with Prof. Siddharth Srivastava. Before that, he completed his M.Tech. in Computer Science and Engineering at Indian Institute of Technology Guwahati with Prof. Pradip K. Das. He was awarded the ICAPS 2025 Outstanding Dissertation Award at ICAPS 2025, AAAI/ACM SIGAI Innovative AI Education Award at AAAI 2025's EAAI Symposium, Graduate College Completion Fellowship at ASU in 2023, Post Graduation Scholarship from the Government of India in 2013 and 2014, and received the Best Demo Award at the International Conference on Autonomous Agents and Multiagent Systems (AAMAS) in 2022.</p>
           </div>
         </article>
-         
+         <article class="speaker-card">
+          <img src="/2026/images/speakers/asim.jpg" alt="Asim Munawar" loading="lazy"/>
+          <div class="speaker-body">
+            <h3 class="speaker-name"><a href="https://asimmunawar.github.io/" target="_blank">Asim Munawar</a><br>IBM Research</h3>
+            <p class="speaker-affil"></p>
+            <p class="speaker-bio">Bio: <br>Dr. Asim Munawar is a Project Lead at IBM’s Watson Research Center in New York, where he heads efforts to enhance reasoning, planning, and agentic workflows in enterprise-scale large language models. With over 15 years of experience in AI—more than a decade of it at IBM Research—he has held key leadership roles, including Manager and Program Director for Neuro-Symbolic AI. Dr. Munawar earned his Ph.D. from Hokkaido University, Japan, and has authored over 80 peer-reviewed publications. He is an inventor on 20+ U.S. patents and a frequent keynote and invited speaker at top venues such as IJCAI, ICSE, and ACMSE. He also serves on advisory boards for the National Center of Artificial Intelligence in Pakistan and the Centaur AI Institute in the U.S.</p>
+          </div>
+        </article>
       </div>
     </section>
 
