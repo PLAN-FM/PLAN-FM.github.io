@@ -141,8 +141,8 @@
     gap: clamp(16px, 3vw, 32px);
     padding: 16px clamp(18px, 3vw, 28px);
     border-radius: var(--radius-md);
-    background: rgba(37, 99, 235, 0.18);
-    color: #0f172a;
+    background: rgb(1, 2, 6 );
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: .08em;
     font-size: 0.8rem;
@@ -165,6 +165,13 @@
     color: var(--text);
   }
   .schedule-program { flex: 1; color: var(--muted); }
+  .speaker-bio {
+    max-height: 100px;
+min-height: 48px;
+overflow: scroll;
+background: ;
+padding: 5px;
+  }
   .speaker-grid {
     display: grid;
     gap: clamp(18px, 2.4vw, 24px);
@@ -182,7 +189,8 @@
     height: 100%;
   }
   .speaker-card img {
-    width: 100%;
+    width: 30%;
+    margin:auto;
     aspect-ratio: 4 / 3;
     border-radius: var(--radius-md);
     object-fit: cover;
@@ -270,27 +278,35 @@
 <main>
   <div class="wrap stack">
     <section class="panel">
-      <h2>Schedule (TBD) </h2>
+      <h2>Schedule </h2>
       <div class="schedule-table">
         <div class="schedule-header">
           <span>Time</span>
           <span>Program</span>
         </div>
+
+        
         <ul class="schedule-list">
           <li class="schedule-item"><span class="schedule-time">9:00</span><span class="schedule-program">Opening Remarks</span></li>
-          <li class="schedule-item"><span class="schedule-time">9:10</span><span class="schedule-program">Tutorial</span></li>
-          <li class="schedule-item"><span class="schedule-time">10:30</span><span class="schedule-program">Coffee Break</span></li>
-          <li class="schedule-item"><span class="schedule-time">11:00</span><span class="schedule-program">Tutorial</span></li>
-          <li class="schedule-item"><span class="schedule-time">11:40</span><span class="schedule-program">Invited Talk</span></li>
-          <li class="schedule-item"><span class="schedule-time">12:10</span><span class="schedule-program">Contributed Talks</span></li>
-          <li class="schedule-item"><span class="schedule-time">12:30</span><span class="schedule-program">Student Mentoring Lunch Session</span></li>
-          <li class="schedule-item"><span class="schedule-time">13:55</span><span class="schedule-program">Contributed Talks</span></li>
-          <li class="schedule-item"><span class="schedule-time">14:15</span><span class="schedule-program">Invited Talk</span></li>
-          <li class="schedule-item"><span class="schedule-time">14:45</span><span class="schedule-program">Invited Talk</span></li>
-          <li class="schedule-item"><span class="schedule-time">15:20</span><span class="schedule-program">Contributed Talk</span></li>
-          <li class="schedule-item"><span class="schedule-time">15:30</span><span class="schedule-program">Coffee Break</span></li>
-          <li class="schedule-item"><span class="schedule-time">16:00</span><span class="schedule-program">Panel Discussion</span></li>
-          <li class="schedule-item"><span class="schedule-time">17:15</span><span class="schedule-program">Closing Remarks</span></li>
+          <li class="schedule-item"><span class="schedule-time">9:10</span><span class="schedule-program">Tutorial <br><br></span></li>
+          <li class="schedule-item" style="background:rgb(255,255,255)"><span class="schedule-time">10:30</span><span class="schedule-program">Coffee Break</span></li>
+          <li class="schedule-item" style="background:rgba(212, 99, 227, 0.21)"><span class="schedule-time">11:00</span><span class="schedule-program"><b> Invited Talk </b> <br><br>
+          <i><a href="https://www.comp.nus.edu.sg/~dyhsu/" target="_blank"> David Hsu</a></i></span></li>
+          <li class="schedule-item"><span class="schedule-time">11:45</span><span class="schedule-program">Contributed Talk: </b></span></li>
+          <li class="schedule-item"><span class="schedule-time">12:00</span><span class="schedule-program">Contributed Talk:</span></li>
+          <li class="schedule-item"><span class="schedule-time">12:15</span><span class="schedule-program">Contributed Talk:</span></li>
+          <li class="schedule-item" style="background:rgb(255,255,255)"><span class="schedule-time">12:30</span><span class="schedule-program">Lunch</span></li>
+          <li class="schedule-item" style="background:rgba(212, 99, 227, 0.21)"><span class="schedule-time">14:00</span><span class="schedule-program"><b> Invited Talk </b> <br><br>
+          <i><a href="https://pulkitverma25.github.io" target="_blank">Pulkit Verma</a></i></span></li>
+          <li class="schedule-item"><span class="schedule-time">14:30</span><span class="schedule-program">Contributed Talk: </span></li>
+          <li class="schedule-item"><span class="schedule-time">14:45</span><span class="schedule-program">Contributed Talk: </span></li>
+          <li class="schedule-item" style="background:rgba(212, 99, 227, 0.21)"><span class="schedule-time">14:00</span><span class="schedule-program"><b> Invited Talk </b> 
+            <!-- <br><br>
+          <i><a href="https://pulkitverma25.github.io" target="_blank">Pulkit Verma</a></i> -->
+        </span></li>
+          <li class="schedule-item" style="background:rgba(255,255,255)"><span class="schedule-time">15:30</span><span class="schedule-program">Coffee Break</span></li>
+          <li class="schedule-item"><span class="schedule-time">16:00</span><span class="schedule-program">Closing Remarks</span></li>
+          <li class="schedule-item" style="background:rgb(193, 249, 216)"><span class="schedule-time">16:05</span><span class="schedule-program">Poster Session</span></li>
         </ul>
       </div>
     </section>
@@ -299,53 +315,21 @@
       <h2>Speakers and Panelists (TBD)</h2>
       <div class="speaker-grid">
         <article class="speaker-card">
-          <img src="/2026/images/speakers/david-hsu.jpg" alt="David Hsu" loading="lazy"/>
+          <img src="/2026/images/speakers/david-hsu.jpg" alt="David Hsu" loading="lazy" width="20em"/>
           <div class="speaker-body">
-            <h3 class="speaker-name">David Hsu</h3>
-            <p class="speaker-affil">National University of Singapore</p>
-            <p class="speaker-focus">Human-robot interactions</p>
+            <h3 class="speaker-name"><a href="https://www.comp.nus.edu.sg/~dyhsu/" target="_blank"> David Hsu</a><br>National University of Singapore</h3>
+            <p class="speaker-bio">Bio: <br> David Hsu is a professor of computer science and the Director of Smart Systems Institute at the National University of Singapore (NUS). He is an IEEE Fellow. His research lies in the intersection of robotics and AI. In recent years, he has been working on robot planning and learning under uncertainty for human-centered robots. His work won multiple international awards, including, most recently, Test of Time Award at Robotics: Science & Systems (RSS) in 2021 and IJCAI-JAIR Best Paper Prize in 2022. He has chaired or co-chaired several international robotics conferences, including WAFR 2010, RSS 2015, ICRA 2016, and CoRL 2021. He served on the editorial boards of Journal of Artificial Intelligence Research and International Journal of Robotics Research. He is currently an Editor of IEEE Transactions on Robotics.</p>
           </div>
         </article>
         <article class="speaker-card">
-          <img src="/2026/images/speakers/chi-wang.jpg" alt="Chi Wang" loading="lazy"/>
+          <img src="/2026/images/speakers/pulkit_verma.webp" alt="Pulkit Verma" loading="lazy"/>
           <div class="speaker-body">
-            <h3 class="speaker-name">Chi Wang</h3>
-            <p class="speaker-affil">Google DeepMind</p>
-            <p class="speaker-focus">Agentic AI frameworks</p>
+            <h3 class="speaker-name"><a href="https://pulkitverma25.github.io" target="_blank">Pulkit Verma</a><br>Indian Institute of Technology Madras</h3>
+            <p class="speaker-affil"></p>
+            <p class="speaker-bio">Bio: <br>Pulkit Verma is an Assistant Professor at the Department of Computer Science and Engineering, IIT Madras. Prior to this, he was a Postdoctoral Associate in the Interactive Robotics Group at the Massachusetts Institute of Technology, where he worked with Prof. Julie Shah. His research focuses on the safe and reliable behavior of taskable AI agents. He investigates the minimal set of requirements in an AI system that would enable a user to assess and understand the limits of its safe operability. He received his Ph.D. in Computer Science from the School of Computing and Augmented Intelligence, Arizona State University, where he worked with Prof. Siddharth Srivastava. Before that, he completed his M.Tech. in Computer Science and Engineering at Indian Institute of Technology Guwahati with Prof. Pradip K. Das. He was awarded the ICAPS 2025 Outstanding Dissertation Award at ICAPS 2025, AAAI/ACM SIGAI Innovative AI Education Award at AAAI 2025's EAAI Symposium, Graduate College Completion Fellowship at ASU in 2023, Post Graduation Scholarship from the Government of India in 2013 and 2014, and received the Best Demo Award at the International Conference on Autonomous Agents and Multiagent Systems (AAMAS) in 2022.</p>
           </div>
         </article>
-        <article class="speaker-card">
-          <img src="/2026/images/speakers/furong-huang.jpg" alt="Furong Huang" loading="lazy"/>
-          <div class="speaker-body">
-            <h3 class="speaker-name">Furong Huang</h3>
-            <p class="speaker-affil">University of Maryland</p>
-            <p class="speaker-focus">Foundational models for sequential decision making</p>
-          </div>
-        </article>
-        <!-- <article class="speaker-card">
-          <img src="/2026/images/speakers/sergey-levine.jpg" alt="Sergey Levine" loading="lazy"/>
-          <div class="speaker-body">
-            <h3 class="speaker-name">Sergey Levine</h3>
-            <p class="speaker-affil">University of California, Berkeley</p>
-            <p class="speaker-focus">Robotics and autonomous decision making</p>
-          </div>
-        </article>
-        <article class="speaker-card">
-          <img src="/2026/images/speakers/nir-lipovetzky.jpg" alt="Nir Lipovetzky" loading="lazy"/>
-          <div class="speaker-body">
-            <h3 class="speaker-name">Nir Lipovetzky</h3>
-            <p class="speaker-affil">The University of Melbourne</p>
-            <p class="speaker-focus">Planning and sequential decision making</p>
-          </div>
-        </article>
-        <article class="speaker-card">
-          <img src="/2026/images/speakers/kartik-talamadupula.jpg" alt="Kartik Talamadupula" loading="lazy"/>
-          <div class="speaker-body">
-            <h3 class="speaker-name">Kartik Talamadupula</h3>
-            <p class="speaker-affil">Wand (Synthesis AI)</p>
-            <p class="speaker-focus">Planning and agentic AI</p>
-          </div>
-        </article> -->
+         
       </div>
     </section>
 
